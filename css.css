@@ -1,0 +1,540 @@
+body {
+    background-color: #ffffff;
+    font-family: "Inter"; 
+}
+
+.main-content {
+    //*width:1170px;*//
+    margin: auto;
+}
+h1 {
+    font-size: 150px;
+    line-height: 0.8em;
+    letter-spacing: -0.05em;
+}
+
+h2 {
+    font-size: 72px;
+    line-height: 0.8em;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+}
+
+h3 {
+    font-size: 50px;
+    line-height: 0.8em;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+}
+
+p.body {
+    font-family: 'Inter';
+    font-size: 20px;
+    line-height: 1em;
+    letter-spacing: -0.05em;
+}
+
+.header {
+    background-color: white;
+    padding: 30 0;
+}
+
+.header .menu {
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.header .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header .social-list {
+    display: flex;
+    justify-content: space-between;
+}
+footer{
+    width:100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+     text-align: center;
+    margin: 2rem auto;
+
+}
+
+
+
+
+section {
+    padding: 1rem;
+    display: block;
+    margin: 0;
+}
+
+.tag {
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+
+    margin: 0.1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 1rem;
+}
+
+/*header*/
+
+.header {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    background-color: white;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-display {
+    margin: 0;
+    padding: 2rem;
+    align-items: center;
+    height: 500px;
+}
+.header .navigation{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    gap:2rem;
+}
+.header .menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    gap:2rem;
+}
+
+.header .banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom:2rem;
+    margin-left: 0.7rem;
+}
+
+.header .navbar-link{
+    border: 0;
+    background: white;
+    border-radius: 5rem;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    color:black;
+}
+
+.header .navbar-link:hover {
+    
+    font-weight: 600;
+}
+
+.header .navbar-link.active{
+    background-color: #ffce3a;
+}
+
+.header ul.social-list {
+    list-style: none;
+    width: inherit;
+    align-items: center;
+    right: 0;
+    margin: 1rem;
+    justify-content: center;
+    padding: 0;
+}
+
+.header .social-item a {
+    margin: 0.3rem;
+    color: black;
+    font-size: 1.5rem;
+}
+.header .social-item a:hover {
+    margin: 0.3rem;
+    color:dodgerblue;
+    font-size: 1.5rem;
+}
+
+.header .banner h3{
+    text-align: left;
+    margin:0;
+    padding:0;
+}
+
+.content {
+    margin-left: 20%;
+}
+
+
+/*intro*/
+section .intro {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.intro-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin: auto;
+    margin-bottom: 5em;
+}
+
+.intro-content .text {
+    text-align: center;
+    margin-right: 5em;
+    margin-top: 5em;
+}
+
+.intro-content .text p {
+    width: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*ipad*/
+.ipad-content .profile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 0.2rem;
+}
+
+.ipad-content .profile img {
+    width: 10%;
+    height: auto;
+    border-radius: 10rem;
+}
+
+.ipad-content .follow {
+    background-color: dodgerblue;
+    border-radius: 3rem;
+    color: white;
+    border-width: 0;
+    padding: 0.2rem 0.7rem;
+    margin: auto;
+    margin-right: 0;
+}
+
+.ipad-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    width: 80%;
+}
+
+.ipad-content .ipad-image img {
+    width: 100%;
+    align-items: center;
+    margin: auto;
+}
+
+.ipad-content .ipad-illustrations {
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+}
+
+.ipad-content .gallery-illustrations {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-y: scroll;
+    height: 80%;
+    grid-gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0.5em;
+    margin: auto;
+}
+
+.ipad-content .gallery-illustrations::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.ipad-content .gallery-illustrations::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.ipad-content .gallery-illustrations::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    border-radius: 30px;
+}
+
+.ipad-content .gallery-illustrations img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+
+/*projects*/
+.projects h2{
+    margin-top: 4vh;
+    margin-bottom: 0.5em;
+}
+
+.projects .nav-link.active{
+    background: #007bff;
+    border-radius:3rem;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+    justify-content: center;
+
+}
+
+.project-box .item {
+    position: relative;
+    margin: 0;
+    border-radius: 20px;
+    height: auto;
+    aspect-ratio:4/3;
+    overflow: hidden;
+    text-align: center;
+    align-items: stretch;
+    background-size: auto 100%;
+    background-position: center;
+    transition: all 0.5s ease;
+}
+
+.projects.illustrations .project-box .item{
+    background-size: auto 100%;
+    height:auto;
+    aspect-ratio: 1/1;
+}
+
+.projects .overlay {
+    opacity: 0;
+    transition: 1s;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-size: auto 100%;
+    backdrop-filter: blur(2px);
+    background-color: rgba(30, 30, 45, 0.4);
+    color: black;
+    border-radius: 1.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.project-box .item:hover{
+    background-size: auto 110%;
+    transition: all 0.5s ease;
+}
+.projects.illustrations .item:hover{
+    background-size: auto 110%;
+    transition: all 0.5s ease;
+}
+
+.project-box:hover .overlay {
+    opacity: 1;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+.projects.illustrations .project-box .overlay{
+    
+    backdrop-filter: none;
+}
+
+.projects .text {
+    color: white;
+    margin: 1rem;
+    width: inherit;
+    display: block;
+    justify-content: flex-start;
+}
+
+.projects .text h3 {
+    margin: 0.3rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.projects .tags-list {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+
+/*project open*/
+.project-open .description{
+    margin: 10rem 0;
+}
+.project-open .description{
+    display: flex;
+    gap:2rem;
+}
+
+.project-open .project-info{
+    display: flex;
+    flex-direction: column;
+    width:60%;
+    margin-right: 10rem;
+}
+.project-open .project-tags{
+    display:flex;
+    justify-content: space-between;
+    gap:3rem;
+}
+.project-open .project-tag{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+.project-open .project-tag p{
+    margin:0;
+}
+.project-open .icon-program{
+    width:2rem;
+    height:auto;
+}
+.project-open .icons-programs{
+    display: flex;
+    gap:0.8rem;
+}
+
+/*project open container*/
+.project-container{
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.project-image-full{
+    width:100%;
+}
+.project-container img{
+    margin:2rem auto;
+}
+.project-container h3{
+    margin:2rem auto;
+}
+.project-container p{
+    width:50%;
+    margin:auto 0;
+    padding:auto;
+    height:auto;
+    
+}
+.project-two-images{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    height:auto;
+    align-content: center;
+    justify-content: center;
+    gap:1%;
+    
+}
+.project-two-images img{
+    width:49%;
+    height:auto;
+    border-radius: 2rem;
+    align-items: center;
+}
+.project-one-image{
+    width:100%;
+    height:auto;
+    align-content:center;
+    justify-content: center;
+    margin:2rem;
+    border-radius:2rem;
+}
+
+
+/*contact*/
+.contact {
+    background-image: url(images/emma_y_silvia.jpg);
+    background-size: cover;
+}
+
+.content-contact {
+    display: flex;
+    justify-content: center;
+    padding: 5em;
+}
+
+.contact .text-contact {
+    width: 50%;
+}
+
+.contact form {
+    background-color: white;
+    display: contents;
+    padding: 2em;
+    margin: 2em;
+    display: block;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .casillas {
+    color: black;
+}
+
+.contact .casillas input {
+    font-family: 'Inter';
+    font-size: 16px;
+    margin: 0.1rem;
+    margin-bottom: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 1rem;
+    border-width: 1px;
+}
+
+.contact textarea {
+    font-family: 'Inter';
+    font-size: 16px;
+    margin: 0.1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 1rem;
+    border-width: 1px;
+}
