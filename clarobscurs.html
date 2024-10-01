@@ -21,8 +21,9 @@
         <div class="main-content">
 
 
-            <header class="header">
+            <header id="header">
                 <div class="header-display">
+                    <button id="close-button" onclick="toggleHeader()">✖</button>
                     <div class="banner">
                         <h3>Marta</h3>
                         <h3> Pey</h3>
@@ -35,7 +36,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="index.html" class="navbar-link">Projects
+                                <a href="index.html" class="navbar-link active">Projects
                                 </a>
                             </li>
                             
@@ -45,7 +46,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="commissions.html" class="navbar-link active">Commissions
+                                <a href="commissions.html" class="navbar-link">Commissions
                                 </a>
                             </li>
 
@@ -79,11 +80,98 @@
                     </div>
                 </div>
             </header>
+            <button id="toggle-button" onclick="toggleHeader()">☰ </button>
 
 
             <div class="content">
 
+                <section class="project-open">
 
+                    <div class="description">
+                        <h2>Clarobscurs</h2>
+                        <div class="project-info">
+                            <p>"Clarobscurs" is much more than just a <b>transmedia project</b>. It becomes a profound reflection of the contradictions that arise when success arrives unexpectedly, posing the dilemma of feeling undeserving and the persistence of internal dissatisfaction. Through expressive work, this project seeks to explore and narrate the subjective experiences of artists, highlighting how they confront their own insecurities, self-sabotage, and imposter syndrome.
+                            </p>
+                            <div class="project-tags">
+                                <div class="project-tag">
+                                    <p><b>Year</b></p>
+                                    <div class="tags">
+                                    <p class="tag">2023</p></div>
+                                </div>
+                                <div class="project-tag" style="margin: 0; width:100%">
+                                    <p> <b>My role</b></p>
+                                    <div class="tags">
+                                        <p class="tag">Brand Identity</p>
+                                        <p class="tag">Graphic Design</p>
+                                        
+                                        <p class="tag">UX & UI Design</p>
+                                        
+                                        <p class="tag">Credits animation</p>
+                                        <p class="tag">Social media</p>
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-tag s">
+                                    <p style="margin-bottom:0.7rem"><b>Software</b></p>
+                                    <div class="icons-programs">
+                                        <img class="icon-program" src="images/icon_photoshop.png">
+                                        <img class="icon-program" src="images/icon_illustrator.png">
+                                        <img class="icon-program" src="images/icon_indesign.png">
+                                        <img class="icon-program" src="images/icon_after_effects.png">
+                                        <img class="icon-program" src="images/icon_figma.png">
+                                        <img class="icon-program" src="images/icon_premiere.png">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-container">
+
+                        <img class="project-image-full" src="images/clarobscurs_credits01.gif">
+                        <h3>Project components</h3>
+                        <p><b>Sort film:</b> The main short film follows the story of the artist as they deal with the pressure and expectations arising from their sudden success. It explores their internal struggles, doubts, and fear of failure, despite their apparent achievements.</p>
+
+                        <p><b>Interactive Web Platform:</b> I designed the user interface for the interactive web platform of "Clarobscurs". This platform offers an immersive experience where viewers can explore the thoughts and emotions of the artist through different sections and can know more about the team than conformed this project.</p>
+
+                        <p><b>Installation:</b> The installation, created in collaboration with my team, symbolically represents the emotional ups and downs of the protagonist artist. Through visual and sensory elements, viewers can empathize with the protagonist's internal struggle.</p>
+
+                        <p><b>Social Media Presence:</b> I participated in the social media strategy of the project, creating graphic and promotional content for platforms such as Instagram and Kickstarter. Social media served as a means to raise awareness about the themes explored in "Clarobscurs", introduce us as a new film Production called Barroca Films, and encourage audience engagement.</p>
+
+                        <p><b>Documentary:</b> The documentary provides another point of view on the theme of imposter syndrome and offers an intimate perspective on the experience of an artist and their creative journal.</p>
+                         <img class="project-image-full" src="images/clarobscurs02.png">
+                        <div class="project-text-image">
+                            <div class="text-side">
+                            <h3>Branding</h3>
+                            <p style="width:auto;">I played a key role in developing the project's overall branding strategy, which included defining its visual style, tone, and messaging to create a cohesive and memorable identity.</p>
+                            <p style="width:auto;">This involved creating visual elements, such as logos, illustrations, and graphics, to support the project's branding and visual identity across various media and platforms.</p>
+                                </div>
+                            <img src="images/clarobscurs03.png">
+                        </div>
+                        <img class="project-one-image" src="images/clarobscurs04.png">
+                        
+                         <div class="project-text-image">
+                            <div class="text-side">
+                            <h3>Interface design</h3>
+                            <p style="width:auto;">I was responsible for designing user interfaces for the interactive web platform and potentially other digital interfaces, such as Social Media and crowdfunding campains.</p>
+                            <p style="width:auto;">This included creating layouts, selecting color schemes, and ensuring intuitive navigation for users</p>
+                                <p>See <a href="https://projectes.eram.cat/clarobscurs/index.html" target="_blank"><b  style="color:#007bff">Clarobscurs web</b></a>.</p>
+                                </div>
+                            <img src="images/clarobscurs05.png">
+                        </div>
+                        <h3>Shortfilm credits</h3>
+                        <p>I also animated the logo and credits of the short film using After Effects to enhance the visual appeal of the project, resembling a watercolor technique.</p>
+                        
+                        <div class="project-three-images">
+                            <img src="images/clarobscurs_credits01.gif">
+                            <img src="images/clarobscurs_credits02.gif">
+                            <img src="images/clarobscurs_credits03.gif">
+                        </div>
+                        <p style="margin:3rem auto; text-align: center">'Clarobscurs' aims to reflect on the complexity of emotions and the profound impact that internal contradictions have in the artistic realm, offering an intimate view of human experiences in these contexts.</p>
+                        
+                    </div>
+
+                </section>
 
 
                 <footer>
@@ -92,6 +180,8 @@
             </div>
         </div>
     </main>
+    
+     <script src="js/script.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -21,8 +21,9 @@
         <div class="main-content">
 
 
-            <header class="header">
+            <header id="header">
                 <div class="header-display">
+                    <button id="close-button" onclick="toggleHeader()">✖</button>
                     <div class="banner">
                         <h3>Marta</h3>
                         <h3> Pey</h3>
@@ -38,7 +39,7 @@
                                 <a href="index.html" class="navbar-link">Projects
                                 </a>
                             </li>
-                            
+
                             <li class="nav-item">
                                 <a href="illustrations.html" class="navbar-link">Illustrations
                                 </a>
@@ -57,7 +58,7 @@
                         </ul>
                         <ul class="social-list">
 
-                           <li class="social-item">
+                            <li class="social-item">
                                 <a href="https://www.instagram.com/martapey.art" class="social-link" target="_blank">
                                     <ion-icon name="logo-instagram"></ion-icon>
                                 </a>
@@ -79,10 +80,73 @@
                     </div>
                 </div>
             </header>
-
+            <button id="toggle-button" onclick="toggleHeader()">☰ </button>
 
             <div class="content">
+                <section class="projects">
+                    <h2>Commissions</h2><h3 style="color:lightgreen;">*NOW OPEN*</h3>
+                    <p>Please fill the commission form below or email me directly at <a href="mailto:martapey12@gmail.com">martapey12@gmail.com</a></p>
+                    <h3>How I work:</h3>
+                    <ol>
+                        <li>Fill the commission form linked down below! Select the type of commission you want and write a description of it (you can atach images, photos, sketches or other visual references to help me understand what you want).
+                        </li>
+                        <li>You will be contacted after I approve your commission request in order to review the details regarding prices and delivery dates.
+                        </li>
+                        <li>I create an illustration for you in my art style in full resolution that you will receive via email within 2-3 weeks after payment!</li>
+                    </ol>
 
+                    <h3>PRICES</h3>
+                    <div class="prices">
+                        <div class="price-1">
+                            <img src="images/il_02.jpg">
+                            <h4>Portrait</h4>
+                            <p>10€</p>
+                        </div>
+                        <div class="price-1">
+                            <img src="images/il_02.jpg">
+                            <h4>Half body</h4>
+                            <p>20€</p>
+                        </div>
+
+                        <div class="price-1">
+                            <img src="images/il_02.jpg">
+                            <h4>Full body</h4>
+                            <p>30€</p>
+                        </div>
+
+
+                    </div>
+                    <p><i>NOTE: This prices apply for personal use commissions only.
+                            For commercial use commissions email me directly at martapey12@gmail.com.
+                            This is the base price, which includes basic background (flat color) and a simple lightning like the pieces above.</i></p>
+                    <p><i>The artwork size is compatible with A3. For a specific size please let me know.</i></p>
+                    <h3> Additional costs</h3>
+                    <table>
+                        <tr>
+                            <th>Addition</th>
+                            <th>Price</th>
+                        </tr>
+                        <tr>
+                            <td>Background elements</td>
+                            <td>10-20€</td>
+
+                        </tr>
+                        <tr>
+                            <td>Additional character</td>
+                            <td>+50% of base price</td>
+
+                        </tr>
+                        <tr>
+                            <td>Extras</td>
+                            <td>5-10€ per item</td>
+
+                        </tr>
+                    </table>
+                    <div class="btn blue"> <a href="https://forms.gle/KWNtKJNGgesFjCVp7" target="_blank">Order a commission </a>
+                    </div>
+                    <div class="btn yellow"><a href="terms-and-conditions.html">Terms and conditions (must read) </a>
+                    </div>
+                </section>
 
 
 
@@ -92,6 +156,8 @@
             </div>
         </div>
     </main>
+
+    <script src="js/script.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

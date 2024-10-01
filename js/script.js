@@ -157,3 +157,13 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+//header lado
+function toggleHeader() {
+    const header = document.getElementById("header");
+    header.classList.toggle("visible"); // Alterna la clase 'visible'
+}
+
+
+
+

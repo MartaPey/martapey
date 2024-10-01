@@ -21,8 +21,9 @@
         <div class="main-content">
 
 
-            <header class="header">
+            <header id="header">
                 <div class="header-display">
+                    <button id="close-button" onclick="toggleHeader()">✖</button>
                     <div class="banner">
                         <h3>Marta</h3>
                         <h3> Pey</h3>
@@ -79,6 +80,7 @@
                     </div>
                 </div>
             </header>
+            <button id="toggle-button" onclick="toggleHeader()">☰ </button>
 
 
             <div class="content">
@@ -108,92 +110,66 @@
 
 
 
-                        <div class="tab-pane fade show active" id="pills-digital" role="tabpanel" aria-labelledby="pills-digital-tab">
+                        <div class="tab-pane digital fade show active" id="pills-digital" role="tabpanel" aria-labelledby="pills-digital-tab">
 
 
-                            <div class="project-gallery">
+                            <div class="illustrations-gallery">
+                               
 
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_01.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_02.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_03.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_04.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_05.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_06.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_07.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_08.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_09.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_10.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_11.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_12.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_13.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_14.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_15.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_16.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_17.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_18.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_19.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_20.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_21.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_22.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_23.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_24.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                <div class="project-box">
-                                    <div class="item" style="background-image: url('images/il_25.jpg');" alt="Un conte de pirates"></div>
-                                </div>
-                                
+                               
+                                    <img src="images/il_01.jpg">
+                                    <img src="images/il_02.jpg">
+                                    <img src="images/il_03.jpg">
+                                    <img src="images/il_04.jpg">
+                                    <img src="images/il_05.jpg">
+                                    <img src="images/il_06.jpg">
+                                    <img src="images/il_07.jpg">
+                                    <img src="images/il_08.jpg">
+                                    <img src="images/il_09.jpg">
+                                    <img src="images/il_10.jpg">
+                                    <img src="images/il_11.jpg">
+                                    <img src="images/il_12.jpg">
+                                    <img src="images/il_13.jpg">
+                                    <img src="images/il_14.jpg">
+                                    <img src="images/il_15.jpg">
+                                    <img src="images/il_16.jpg">
+                                    <img src="images/il_17.jpg">
+                                    <img src="images/il_18.jpg">
+                                    <img src="images/il_19.jpg">
+                                    <img src="images/il_20.jpg">
+                                    <img src="images/il_21.jpg">
+                                    <img src="images/il_22.jpg">
+                                    <img src="images/il_23.jpg">
+                                    <img src="images/il_24.jpg">
+                                    <img src="images/il_25.jpg">
+                                    <img src="images/il_26.jpg">
+                               
                                 
 
                             </div>
                         </div>
-                        
+                        <div class="tab-pane traditional fade show" id="pills-traditional" role="tabpanel" aria-labelledby="pills-traditional-tab">
+
+                                <div class="illustrations-gallery">
+
+                                    <div class="gallery-column">
+                                        <img class="box-image" src="images/tr_ellie01.jpg" alt="Un conte de pirates">
+                                        <img class="box-image" src="images/tr_barbie.jpg" alt="Un conte de pirates">
+                                        <img class="box-image" src="images/tr_zoe.jpg" alt="Un conte de pirates"></div>
+                                    <div class="gallery-column">
+                                        <img class="box-image" src="images/tr_renee.jpg" alt="Un conte de pirates">
+                                        <img class="box-image" src="images/tr_rey.jpg" alt="Un conte de pirates">
+                                        <img class="box-image" src="images/tr_natalie.jpg" alt="Un conte de pirates"></div>
+                                    <div class="gallery-column">
+                                        <img class="box-image" src="images/tr_abby01.jpg" alt="Un conte de pirates">
+                                        <img class="box-image" src="images/tr_ellie02.jpg" alt="Un conte de pirates">
+                                        <img class="box-image" src="images/tr_zhavia.jpg" alt="Un conte de pirates"></div>
+
+                               
+                            </div>
+
+
+                        </div>
 
 
                     </div>
@@ -207,6 +183,8 @@
             </div>
         </div>
     </main>
+    
+     <script src="js/script.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

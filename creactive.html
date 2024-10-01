@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Marta Pey - Portfolio</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <main>
+
+        <div class="main-content">
+
+
+            <header id="header">
+                <div class="header-display">
+                    <button id="close-button" onclick="toggleHeader()">✖</button>
+                    <div class="banner">
+                        <h3>Marta</h3>
+                        <h3> Pey</h3>
+                    </div>
+                    <div class="navigation">
+                        <ul class="menu">
+                            <li class="nav-item">
+                                <a href="about.html" class="navbar-link">About
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="index.html" class="navbar-link active">Projects
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a href="illustrations.html" class="navbar-link">Illustrations
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="commissions.html" class="navbar-link">Commissions
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href=contact.html class="navbar-link">Lets work!
+                                </a>
+                            </li>
+
+                        </ul>
+                        <ul class="social-list">
+
+                            <li class="social-item">
+                                <a href="https://www.instagram.com/martapey.art" class="social-link" target="_blank">
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                </a>
+                            </li>
+
+                            <li class="social-item">
+                                <a href="https://www.behance.net/martapey" class="social-link" target="_blank">
+                                    <ion-icon name="logo-behance"></ion-icon>
+                                </a>
+                            </li>
+
+                            <li class="social-item">
+                                <a href="https://www.x.com/martapey_art" class="social-link" target="_blank">
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <button id="toggle-button" onclick="toggleHeader()">☰ </button>
+
+
+            <div class="content">
+
+                <section class="project-open">
+
+                    <div class="description">
+                        <h2>Creactive</h2>
+                        <div class="project-info">
+                            <p>CREACTIVE is an app aimed at all the little artists that live inside us.
+We create daily challenges, where depending on the discipline you like most, you can develop your creativity in a fun and dynamic way.
+                            </p>
+                            <div class="project-tags">
+                                <div class="project-tag">
+                                    <p ><b>Year</b></p>
+                                    <div class="tags">
+                                    <div class="tag">2022</div></div>
+                                </div>
+                                <div class="project-tag" style="margin: 0; width:100%">
+                                    <p ><b>My role</b></p>
+                                    <div class="tags">
+                                        <div class="tag">Brand identity</div>
+                                        <div class="tag">UX & UI Design</div>
+                                        <div class="tag">Graphic Design</div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-tag s">
+                                    <p><b>Software</b></p>
+                                    <div class="icons-programs">
+                                        <img class="icon-program" src="images/icon_figma.png">
+                                        <img class="icon-program" src="images/icon_photoshop.png">
+                                        <img class="icon-program" src="images/icon_illustrator.png">
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-container">
+
+                        <img class="project-image-full" src="images/portada_creactive.png">
+                        <div class="project-text-image">
+                            <div class="text-side">
+                            <h3>UX & UI Design</h3>
+                                <p style="width:auto;">This university project consisted in the creation of an app based on <b>UX & UI Design</b>. Our idea was to integrate <b>Daily Challenges</b> related to photography, drawing, writing, video and audio, which involved creating interfaces and interactions that allowed users to complete these challenges effortessly.</p>
+                                <p style="width:auto;">My role in this project involved conceptualizing and designing the <b>User Interface</b> of the app, creating layouts, visual elements, and interactive components, ensuring it was intuitive, visually appealing and conducive.</p>
+                                <p style="width:auto;">In addition to <b>UX design</b>, I focused on optimizing the overall user experience throughout the app, which entailed understanding user behaviors, preferences and needs. </p>
+                                </div>
+                            <img src="images/creactive02.jpg">
+                        </div>
+                        <img class="project-image-full" src="images/creactive03.png">
+
+                        
+                        <p style="margin:3rem auto; text-align: center">LastPhrase</p>
+                    </div>
+
+                </section>
+
+
+                <footer>
+                    <p>2024 Marta Pey - Illustrator and Graphic Designer</p>
+                </footer>
+            </div>
+        </div>
+    </main>
+    
+     <script src="js/script.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
