@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back" />
     <link rel="stylesheet" href="css.css">
 </head>
 
@@ -25,8 +26,8 @@
                 <div class="header-display">
                     <button id="close-button" onclick="toggleHeader()">✖</button>
                     <div class="banner">
-                        <h3>Marta</h3>
-                        <h3> Pey</h3>
+                        <a href="index.html" class="navbar-link">
+                            <img src="images/logo_martapey.PNG"></a>
                     </div>
                     <div class="navigation">
                         <ul class="menu">
@@ -50,31 +51,54 @@
                                 </a>
                             </li>
 
-                            <li class="nav-item">
-                                <a href=contact.html class="navbar-link">Lets work!
+                            <li class="nav-item"> 
+                                <a href="https://patreon.com/martapey" class="navbar-link" target="_blank">
+                                    <img class="social-image" src="images/icon_patreon.svg" style="margin-right: 0.2em; padding-bottom: 5px;">
+                                 Patreon blog
                                 </a>
                             </li>
 
                         </ul>
+                       
                         <ul class="social-list">
+                            <div style="display: flex;">
 
                             <li class="social-item">
-                                <a href="https://www.instagram.com/martapey.art" class="social-link" target="_blank">
+                                <a href="https://www.instagram.com/martapey.art" class="social-link" target="_blank" title="Instagram">
                                     <ion-icon name="logo-instagram"></ion-icon>
                                 </a>
                             </li>
+                            
+                            <li class="social-item">
+                                <a href="https://bsky.app/profile/martapey.bsky.social" class="social-link" target="_blank" title="Bluesky">
+                                    <img class="social-image" src="images/icon_bluesky.svg">
+                                </a>
+                            </li>
 
                             <li class="social-item">
-                                <a href="https://www.behance.net/martapey" class="social-link" target="_blank">
+                                <a href="https://www.behance.net/martapey" class="social-link" target="_blank" title="Behance">
                                     <ion-icon name="logo-behance"></ion-icon>
                                 </a>
                             </li>
+                            </div>
+                            <div style="display: flex;">
 
                             <li class="social-item">
-                                <a href="https://www.x.com/martapey_art" class="social-link" target="_blank">
+                                <a href="https://www.x.com/martapey_art" class="social-link" target="_blank" title="Twitter">
                                     <ion-icon name="logo-twitter"></ion-icon>
                                 </a>
                             </li>
+                            <li class="social-item">
+                                <a href="https://www.twitch.tv/emapeyy" class="social-link" target="_blank">
+                                    <ion-icon name="logo-twitch"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="https://www.youtube.com/@martapey" class="social-link" target="_blank">
+                                    <ion-icon name="logo-youtube"></ion-icon>
+                                </a>
+                            </li>
+                            </div>
 
                         </ul>
                     </div>
@@ -86,10 +110,19 @@
             <div class="content">
                 <section class="projects">
                     <h2>Commissions </h2>
+                    <h3>How I work:</h3>
+                    <ol>
+                        <li>To place an order, simply click the "Order a Commission" button, which will redirect you to a form where you can specify the details of your request, writing a description of it (you can atach images, sketches or other visual references to help me understand what you want).
+                        </li>
+                        <li>You will be contacted after I approve your commission request in order to review the details regarding prices and delivery dates.
+                        </li>
+                        <li>The final price will be established after an initial sketch has been defined, which will allow the commission work to begin. For any questions, please feel free to contact me at: <a href="mailto:martapey12@gmail.com" target="_blank">martapey12@gmail.com</a> </li>
+                    </ol>
+                    
                     <h3>Terms and conditions</h3>
                     
-                    <ol>
-                        <li>General terms
+                    <ol class="terms">
+                        <li><b>General terms</b>
                             <ul>
                             <li>I have the right to decline a piece if I’m uncomfy.</li>
                             <li>Price may vary on complexity of character/pose/etc.</li>
@@ -97,28 +130,32 @@
                             <li>Payment is via PayPal, Bizum or Bank transfer.</li>
                             <li>Commission payment can be done either 100% upfront or in two installments of 50% each (one before I start working and the other after the sketch has been approved).</li>
                             <li>If you do not have a visual reference for your character/s, there will be an extra charge of 5$ (due to the difficulty of reading through descriptions and to get all of the fine details).</li></ul></li>
-                        <li>REVISIONS AND CHANGES
+                        <li><b>REVISIONS AND CHANGES</b>
                             <ul>
                                 <li>I will send you pictures of the process, however, I must be informed of all changes you’d like me to make BEFORE I start the coloring process. Changes not related to coloring after that point will have an extra cost.</li></ul></li>
-                        <li>CANCELATION POLICY / REFUNDS
+                        <li><b>CANCELATION POLICY / REFUNDS</b>
                             <ul>
                                 <li>Full refunds are only available BEFORE I finish the initial sketch. Then, depending on the stage of the piece I am in, I will give an adequate partial refund.</li>
                                 <li>The insatisfaction of the final piece does not warrant a refund, as the client has several instances throughout the process to voice any inconveniences they may have to prevent. </li></ul></li>
-                        <li>COPYRIGHT / USAGE POLICY
+                        <li><b>COPYRIGHT / USAGE POLICY</b>
                             <ul>
                                 <li>I, Marta (the artist) will own the rights to any produced drawing unless specified otherwise under a contract.</li>
                             <li>I may post your commission on my profile. If you do not wish for this to happen, please let me know before I finish the commission.</li>
                             <li>The client is allowed to use the piece for personal use only. This includes printing the artwork for themselves and post/use the artwork on their social media as long as credit is given and no monetary profit is gained from the image.</li>
                             <li>The client is NOT allowed to sell, modify, or make money/profits from the artwork in question in any way or form. This includes selling it as merchandise, prints, stickers, used on editorial products, NFTs or digital assets, etc. Doing any of the latter will result in a copyright infringement.</li>
                                 <li>If you have a deadline, let me know! Tight deadlines might increase final price.</li></ul> </li>
-                            <p>If you have any question, feel free to write me to martapey12@gmail.com or my Instagram <a href="instagram-com/martapey.art">@martapey.art</a>.</p>
+                            <p>If you have any question, feel free to write me to martapey12@gmail.com or my Instagram <a href="instagram-com/martapey.art" target="_blank">@martapey.art</a>.</p>
                         <li>Thank you!</li>
                     </ol>
                         
-                    <div class="btn blue"> <a href="https://forms.gle/KWNtKJNGgesFjCVp7" target="_blank">Order a commission </a>
-                    </div>
-                        <div class="btn yellow"> <a href="commissions.html">Go back ←</a>
-                    </div>
+                    <button class="btn blue"> <a href="https://forms.gle/KWNtKJNGgesFjCVp7" target="_blank">Order a commission </a>
+                    </button>
+                        <button class="btn yellow"> <a href="commissions.html">Explore commissions <span class="material-symbols-outlined">
+arrow_back
+</span></a>
+                    </button>
+                    <p style="margin-top:0.5em;"><i>NOTE: This prices apply for personal use commissions only.
+                                    For commercial use commissions email me directly at <a href="mailto:martapey12@gmail.com" target="_blank"> martapey12@gmail.com</a>.</i></p>
                 
                 </section>
 

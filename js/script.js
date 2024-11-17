@@ -2,161 +2,7 @@
 
 
 
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-
-
-// sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
-
-
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
-
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
-
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
-
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-
-  testimonialsItem[i].addEventListener("click", function () {
-
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
-    testimonialsModalFunc();
-
-  });
-
-}
-
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
-
-
-
-// custom select variables
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-select.addEventListener("click", function () { elementToggleFunc(this); });
-
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-
-  });
-}
-
-// filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
-
-const filterFunc = function (selectedValue) {
-
-  for (let i = 0; i < filterItems.length; i++) {
-
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
-    }
-
-  }
-
-}
-
-// add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
-
-for (let i = 0; i < filterBtn.length; i++) {
-
-  filterBtn[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
-
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-
-  });
-
-}
-
-
-
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-
-  });
-}
-
-
-
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
-
-  });
-}
 
 //header lado
 function toggleHeader() {
@@ -167,3 +13,203 @@ function toggleHeader() {
 
 
 
+//lightbox
+const enlaces = document.querySelectorAll('.dibuix');
+const lightbox = document.querySelector('.lightbox');
+const grande = document.querySelector('.grande');
+const cerrar = document.querySelector('.cerrar');
+const prev = document.querySelector('.lightbox .prev');
+const next = document.querySelector('.lightbox .next');
+
+let rutas = [];
+let indiceActual = 0;
+
+// Llenar el arreglo con las rutas de las imágenes
+enlaces.forEach((cadaEnlace, i) => {
+    rutas.push(cadaEnlace.querySelector('.img').src);
+
+    cadaEnlace.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        indiceActual = i;
+
+        grande.setAttribute('src', rutas[indiceActual]);
+        lightbox.classList.add('active');
+    });
+});
+
+function cambiarImagen(direccion) {
+    // Clase de salida activa (desaparece la imagen actual)
+    grande.classList.add(direccion === 'next' ? 'slide-left-exit-active' : 'slide-right-exit-active');
+
+    // Después de 400ms, cambia la imagen y aplica la animación de entrada
+    setTimeout(() => {
+        // Actualizar el índice de la imagen actual
+        if (direccion === 'next') {
+            indiceActual = (indiceActual < rutas.length - 1) ? indiceActual + 1 : 0;
+        } else {
+            indiceActual = (indiceActual > 0) ? indiceActual - 1 : rutas.length - 1;
+        }
+
+        grande.setAttribute('src', rutas[indiceActual]);
+
+        // Remover clase de salida y añadir clase de entrada
+        grande.classList.remove('slide-left-exit-active', 'slide-right-exit-active');
+        grande.classList.add(direccion === 'next' ? 'slide-left-enter' : 'slide-right-enter');
+
+        // Quitar la clase de entrada después de que termine la animación
+        setTimeout(() => {
+            grande.classList.remove('slide-left-enter', 'slide-right-enter');
+        }, 200); // Duración de la animación
+    }, 300); // Duración de la animación de salida
+}
+
+// Cambiar a la imagen siguiente
+next.addEventListener('click', () => {
+    cambiarImagen('next');
+});
+
+// Cambiar a la imagen anterior
+prev.addEventListener('click', () => {
+    cambiarImagen('prev');
+});
+
+// Cerrar el lightbox
+cerrar.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+});
+
+// Cerrar el lightbox cuando se hace clic fuera de la imagen
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) { // Solo cerrar si el clic es fuera de la imagen
+        lightbox.classList.remove('active');
+    }
+});
+
+
+//Slider
+// Object to store current slide index for each slider
+// Object to store current slide index for each slider
+let slideIndexes = {};
+
+// Initialize sliders
+function initializeSlider(sliderId) {
+    slideIndexes[sliderId] = 1;
+    showSlides(slideIndexes[sliderId], sliderId);
+}
+
+// Function to move to the next or previous slide
+function plusSlides(n, sliderId) {
+    showSlides(slideIndexes[sliderId] += n, sliderId);
+}
+
+// Function to move to a specific slide
+function currentSlide(n, sliderId) {
+    showSlides(slideIndexes[sliderId] = n, sliderId);
+}
+
+// Main function to show slides for a specific slider
+function showSlides(n, sliderId) {
+    let i;
+    let slider = document.getElementById(sliderId);
+    let slides = slider.getElementsByClassName("mySlides");
+    let dots = slider.getElementsByClassName("demo");
+
+    // Control to loop back slides
+    if (n > slides.length) {
+        slideIndexes[sliderId] = 1;
+    }
+    if (n < 1) {
+        slideIndexes[sliderId] = slides.length;
+    }
+
+    // Hide all slides in the current slider
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    // Remove the "active" class from all dots in the current slider
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    // Show the current slide and add "active" class to the current dot
+    slides[slideIndexes[sliderId] - 1].style.display = "block";
+    if (dots.length > 0) {
+        dots[slideIndexes[sliderId] - 1].className += " active";
+    }
+}
+
+// Initialize sliders after DOM content is loaded
+document.addEventListener("DOMContentLoaded", function() {
+    initializeSlider("slider1");
+    initializeSlider("slider2");
+    initializeSlider("slider3");
+    initializeSlider("slider4");
+});
+
+
+
+//Dropdown
+const contadorElement = document.getElementById('contador');
+let typeSumaValue = 0; // Valor del primer dropdown
+let styleMultiplicacionValue = 1; // Multiplicador de estilo
+let charMultiplicacionValue = 1; // Multiplicador de Characters
+let backValue = 0; // Valor del tercer dropdown
+let objSumaValue = 0; // Valor del slider de suma de objetos
+let valorSeleccionado = 0; // Valor de opciones seleccionadas
+
+// Actualizar el valor base del primer dropdown
+function actualizarType() {
+    typeSumaValue = parseInt(document.getElementById('typeSuma').value, 10);
+    recalcularResultado();
+}
+
+// Actualizar el valor de estilo (multiplicador)
+function actualizarStyleMultiplicacion() {
+    styleMultiplicacionValue = parseInt(document.getElementById('styleMultiplicacion').value, 10);
+    recalcularResultado();
+}
+
+// Actualizar el valor del multiplicador de Characters
+function actualizarCharMultiplicacion() {
+    charMultiplicacionValue = parseInt(document.getElementById('charMultiplicacion').value, 10);
+    document.getElementById('charMultiplicacionValue').textContent = charMultiplicacionValue;
+    recalcularResultado();
+}
+
+// Actualizar el valor de fondo
+function actualizarBack() {
+    backValue = parseInt(document.getElementById('backSuma').value, 10);
+    recalcularResultado();
+}
+
+// Actualizar el valor de objetos extra (suma)
+function actualizarObjSuma() {
+    objSumaValue = parseInt(document.getElementById('objSuma').value, 10) * 5;
+    document.getElementById('objSumaValue').textContent = objSumaValue / 5;
+    recalcularResultado();
+}
+
+// Actualizar valor de los extras seleccionados
+function actualizarSeleccion() {
+    const seleccionadas = document.querySelectorAll('input[name="opcion"]:checked');
+    valorSeleccionado = Array.from(seleccionadas).reduce((acc, el) => acc + parseInt(el.value, 10), 0);
+    recalcularResultado();
+}
+
+// Recalcular el resultado total
+function recalcularResultado() {
+    const resultado = (typeSumaValue * charMultiplicacionValue * styleMultiplicacionValue) + (backValue * styleMultiplicacionValue) + (objSumaValue * styleMultiplicacionValue) + valorSeleccionado;
+    contadorElement.textContent = resultado;
+}
+
+// Eventos de cambio para cada control
+document.getElementById('typeSuma').addEventListener('change', actualizarType);
+document.getElementById('styleMultiplicacion').addEventListener('change', actualizarStyleMultiplicacion);
+document.getElementById('charMultiplicacion').addEventListener('input', actualizarCharMultiplicacion);
+document.getElementById('backSuma').addEventListener('change', actualizarBack);
+document.getElementById('objSuma').addEventListener('input', actualizarObjSuma);
+document.querySelectorAll('input[name="opcion"]').forEach(checkbox => {
+    checkbox.addEventListener('change', actualizarSeleccion);
+});

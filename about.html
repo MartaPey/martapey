@@ -23,10 +23,10 @@
 
             <header id="header">
                 <div class="header-display">
-                     <button id="close-button" onclick="toggleHeader()">✖</button>
+                    <button id="close-button" onclick="toggleHeader()">✖</button>
                     <div class="banner">
-                        <h3>Marta</h3>
-                        <h3> Pey</h3>
+                        <a href="index.html" class="navbar-link">
+                            <img src="images/logo_martapey.PNG"></a>
                     </div>
                     <div class="navigation">
                         <ul class="menu">
@@ -39,7 +39,7 @@
                                 <a href="index.html" class="navbar-link">Projects
                                 </a>
                             </li>
-                            
+
                             <li class="nav-item">
                                 <a href="illustrations.html" class="navbar-link">Illustrations
                                 </a>
@@ -50,37 +50,60 @@
                                 </a>
                             </li>
 
-                            <li class="nav-item">
-                                <a href=contact.html class="navbar-link">Lets work!
+                            <li class="nav-item"> 
+                                <a href="https://patreon.com/martapey" class="navbar-link" target="_blank">
+                                    <img class="social-image" src="images/icon_patreon.svg" style="margin-right: 0.2em; padding-bottom: 5px;">
+                                 Patreon blog
                                 </a>
                             </li>
 
                         </ul>
+                       
                         <ul class="social-list">
+                            <div style="display: flex;">
 
                             <li class="social-item">
-                                <a href="https://www.instagram.com/martapey.art" class="social-link" target="_blank">
+                                <a href="https://www.instagram.com/martapey.art" class="social-link" target="_blank" title="Instagram">
                                     <ion-icon name="logo-instagram"></ion-icon>
                                 </a>
                             </li>
+                            
+                            <li class="social-item">
+                                <a href="https://bsky.app/profile/martapey.bsky.social" class="social-link" target="_blank" title="Bluesky">
+                                    <img class="social-image" src="images/icon_bluesky.svg">
+                                </a>
+                            </li>
 
                             <li class="social-item">
-                                <a href="https://www.behance.net/martapey" class="social-link" target="_blank">
+                                <a href="https://www.behance.net/martapey" class="social-link" target="_blank" title="Behance">
                                     <ion-icon name="logo-behance"></ion-icon>
                                 </a>
                             </li>
+                            </div>
+                            <div style="display: flex;">
 
                             <li class="social-item">
-                                <a href="https://www.x.com/martapey_art" class="social-link" target="_blank">
+                                <a href="https://www.x.com/martapey_art" class="social-link" target="_blank" title="Twitter">
                                     <ion-icon name="logo-twitter"></ion-icon>
                                 </a>
                             </li>
+                            <li class="social-item">
+                                <a href="https://www.twitch.tv/emapeyy" class="social-link" target="_blank">
+                                    <ion-icon name="logo-twitch"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="https://www.youtube.com/@martapey" class="social-link" target="_blank">
+                                    <ion-icon name="logo-youtube"></ion-icon>
+                                </a>
+                            </li>
+                            </div>
 
                         </ul>
                     </div>
                 </div>
             </header>
-             <button id="toggle-button" onclick="toggleHeader()">☰ </button>
+            <button id="toggle-button" onclick="toggleHeader()">☰ </button>
 
 
             <div class="content">
@@ -90,72 +113,333 @@
 
                     <div class="intro-content">
 
-                        <div class="text">
-                            <h2>About</h2>
+                        <div class="text esq" >
 
-                            <p class="body">Hi! I am Marta Pey, a passionate <b>artist</b>, <b>illustrator</b> and <b>graphic designer</b> based in Spain, with a deep love for creativity in all its forms. </p>
-                            <p class="body">Digital drawing has become one of my greatest passions, as well as creating stories, 3D modeling and animation, UX and UI Design, and a long list of creative ways to design my own space and imagine new ways of living, which up to now all it has given me has been pure joy. </p>
-                            <p class="body">In this portfolio I invite you to explore a sample of my work and to enjoy the journey through my creative world! </p>
-                        </div>
+                            <div class="bloc">
 
-                        <div class="ipad-content">
-
-
-                            <div class="ipad-illustrations">
-                                <div class="profile">
-                                    <img src="images/martapey_profile.jpg">
-                                    <h4>martapey.art</h4>
-                                    <a class="follow" href="https://instagram.com/martapey.art" target="_blank"> Follow</a>
-                                </div>
+                                <img src="images/perfil.png" style="max-width:20em; border-radius:100%;"></div>
+                             <div class="bloc">
+                                <h2 style="margin-bottom:0.5em;">Marta Pey</h2>
+                                <h4>DESIGNER AND ILLUSTRATOR</h4>
+                                <p>Hi! I am Marta Pey, a passionate <b>illustrator</b>, <b>graphic designer</b> and <b>digital content creator</b> based in Spain, with a deep love for creativity in all its forms. </p>
+                                
+                                <p> I seek opportunities to drive brand growth and visibility. I have experience in commissioned illustrations, editorial design, web, and promotional content, adapting to client requests and integrating them into my style.</p>
                                 
 
-                               
 
                             </div>
-                            <div class="ipad-image">
-                                <img src="images/ipad_dibujo.png">
+                            <button class="btn yellow"><a href="#contact">Wanna work together?</a></button>
+                            <div class="bloc">
+                                <h4>CONTACT</h4>
+                                <div class="btn"> <a href="mailto:martapey12@gmail.com" target="_blank">
+                                    <ion-icon name="mail-outline"></ion-icon>
+                                    <p>martapey12gmail.com</p> </a>
+                                </div>
+                                <div class="btn"><a href="https://martapey.com" target="_blank">
+                                    <ion-icon name="link-outline"></ion-icon>
+                                    <p> martapey.com</p></a>
+                                </div>
+                                <div class="btn"> <a href="https://instagram.com/martapey.art" target="_blank">
+                                    <ion-icon name="logo-instagram"></ion-icon>
+
+
+                                    <p>@martapey.art</p></a>
+                                </div>
                             </div>
+
+                            <div class="bloc">
+
+                                <h4>HABILITIES</h4>
+                                <ul>
+                                    <li>Digital illustration</li>
+                                    <li>Traditional illustration</li>
+                                    <li>Logo design</li>
+                                    <li>Web design and development</li>
+                                    <li>Editorial design</li>
+                                    <li>Brand identity</li>
+                                    <li>3D Modeling and animation</li>
+                                    <li>UX & UI Design</li>
+                                    <li>Video editing</li>
+                                </ul>
+
+                            </div>
+
+                           
+
+                            <div class="bloc">
+
+                                <h4>SOFTWARE</h4>
+                                <div class="icon-gallery">
+                                    <div class="soft">
+                                        <img class="icon-program" src="images/icon_photoshop.png" title="Adobe Photoshop">
+                                        <p>Photoshop</p>
+                                    </div>
+                                    <div class="soft">
+                                        <img class="icon-program" src="images/icon_illustrator.png" title="Adobe Illustrator">
+                                        <p>Illustrator</p>
+                                    </div>
+                                    <div class="soft">
+                                        <img class="icon-program" src="images/icon_indesign.png" title="Adobe InDesign">
+                                        <p>InDesign</p>
+                                    </div>
+                                    <div class="soft">
+                                        <img class="icon-program" src="images/icon_after_effects.png" title="Adobe AfterEffects">
+                                        <p>AfterEffects</p>
+                                    </div>
+                                    <div class="soft">
+                                        <img class="icon-program" src="images/icon_blender.png" title="Blender">
+                                        <p>Blender</p>
+                                    </div>
+                                    <div class="soft">
+                                        <img class="icon-program" src="images/icon_figma.png" title="Figma">
+                                        <p>Figma</p>
+                                    </div>
+                                    <div class="soft">
+                                        <img class="icon-program" src="images/icon_premiere.png" title="Adobe Premiere Pro">
+                                        <p>PremierePro</p>
+                                    </div>
+                                    <div class="soft">
+                                        <img class="icon-program" src="images/icon_procreate.png" title="Procreate">
+                                        <p>Procreate</p>
+                                    </div>
+                                    <div class="soft">
+                                        <img class="icon-program" src="images/icon_brackets.png" title="Brackets">
+                                        <p>Brackets</p>
+                                    </div>
+                                </div>
+                            </div>
+
 
                         </div>
+                        <div class="text dret" >
 
 
+                           <div class="bloc">
+                                <h4>LATEST PROJECTS</h4>
+                                <div class="projects">
+
+                                    <div class="project-gallery" style="grid-gap:0.5em;">
+
+                                        <div class="project-box">
+                                            <div class="item" style="background-image: url('images/pirates01.png');" title="Un conte de pirates" alt="Un conte de pirates">
+
+                                                <a class="overlay" href="pirates.html">
+                                                    <div class="text">
+
+                                                        <h4>Un conte de pirates</h4>
+                                                        <div class="tags-list">
+                                                            <p class="tag">2023</p>
+                                                            <p class="tag">Illustration</p>
+                                                            <p class="tag">Editorial Design</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-box">
+                                            <div class="item" style="background-image: url('images/engrunes01.png');" title="Llençar les engrunes" alt="Llençar les engrunes">
+
+                                                <a class="overlay" href="engrunes.html">
+                                                    <div class="text">
+
+                                                        <h4>Llençar les engrunes</h4>
+                                                        <div class="tags-list">
+                                                            <p class="tag">2024</p>
+                                                            <p class="tag">Webcomic</p>
+                                                            <p class="tag">UX & UI Design</p>
+                                                            <p class="tag">Web Development</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="project-box">
+                                            <div class="item" style="background-image: url(images/clarobscurs_credits01.gif)" );>
+                                                <a class="overlay" href="clarobscurs.html">
+                                                    <div class="text">
+                                                        <h4>Clarobscurs</h4>
+                                                        <div class="tags-list">
+                                                            <p class="tag">2023</p>
+                                                            <p class="tag">Branding</p>
+                                                            <p class="tag">UX & UI Design</p>
+                                                            <p class="tag">Credits</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <button class="btn yellow"> <a href="index.html">See more projects</a></button>
+
+                            </div>
+
+                            <div class="bloc">
+                                <h4>EXPERIENCE</h4>
+
+                                <p><b>GRAPHIC DESIGN AND MARKETING (INTERNSHIP)</b></p>
+                                <p><b>GrandVoyage A2C Travel, S.L | Feb 2024 - Aug 2024</b></p>
+                                <ul>
+                                    <li>Contribution to the development of new brand identities</li>
+                                    <li>Design and animation of online advertising campaigns</li>
+                                    <li>Optimization and graphic design adaptation of digital content (UX & UI Design, Newsletters, promotional content)</li>
+                                </ul>
+
+                                <p><b>DRAWING AND GRAPHIC DESIGN TEACHER</b></p>
+                                <p><b>Private teacher of traditional and digital drawing and tutor of audiovisual design | 2023 - Present</b></p>
+                                <ul>
+                                    <li>Traditional graphite drawing classes, experienced with children</li>
+                                    <li>Digital drawing classes with Procreate</li>
+                                    <li>Classes and guidance in interactive design with Adobe Suite (Photoshop, Illustrator, InDesign, Premiere), Figma, Blender and Maya</li>
+                                </ul>
+
+                            </div>
+
+
+                            <div class="bloc">
+                                <h4>EDUCATION</h4>
+                                <div class="bloc">
+
+                                    <p><b>DEGREE IN AUDIOVISUAL COMUNICATION AND MULTIMEDIA</b></p>
+                                    <p>Escola Universitaria ERAM, Universitat de Girona | 2019-2024</p>
+                                </div>
+
+                                <div class="bloc">
+                                    <p><b>ARTISTIC BACCALAUREATE</b></p>
+                                    <p>Institut Josep Mestres i Busquets | 2017-2019</p>
+                                </div>
+
+                                <div class="bloc">
+                                    <p><b>Compulsory Secondary Education (ESO)</b></p>
+                                    <p>Institut Mediterrania | 2013-2017</p>
+                                </div>
+
+                            </div>
+
+                            <div class="bloc">
+                                <h4>EXTRA FORMATION</h4>
+                                <div class="bloc">
+
+                                    <p><b>Illustration seminar</b></p>
+                                    <p>Escola Universitaria ERAM, Universitat de Girona | 2020</p>
+                                </div>
+
+                                <div class="bloc">
+                                    <p><b>3D ZBrush Workshop</b></p>
+                                    <p>Escola Universitaria ERAM, Universitat de Girona | 2020</p>
+                                </div>
+
+
+                            </div>
+                            
+                             <div class="bloc" >
+                                <h4>LANGUAGES</h4>
+                                 <div style="display:flex; gap:3em;">
+                               <div><p><b>CATALAN</b></p>
+                                <p>Native</p></div>
+                                 <div>
+                                <p><b>SPANISH</b></p>
+                                <p>Native</p></div>
+                                 <div>
+                                <p>
+                                    <b>ENGLISH</b></p>
+                                <p>B2.2 Level</p></div>
+                                     </div>
+                            </div>
+
+                            
+                        </div>
                     </div>
 
+                    
+
+
+
+
                 </section>
-                <section class="contact">
+                <section class="contact" id="contact">
                     <div class="content-contact">
                         <div class="text-contact">
                             <h2 style="margin-bottom:2rem;">Lets work together!</h2>
 
 
                             <p class="body">Do you have a project in mind? Send me a message at <a href="mailto:martapey12@gmail.com?subject=A new project&Body=My idea is..." target="-blank"><b>martapey12@gmail.com</b></a> and I'll reply as soon as possible!
-                                </p>
-                                <p class="body">You can also contact me at any of my social media. </p>
+                            </p>
+                            <p class="body">You can also contact me at any of my social media. </p>
                         </div>
                         <ul class="social-list">
 
                             <li class="social-item">
-                                <a href="https://www.instagram.com/martapey.art" class="social-link" target="_blank">
+                                <a href="https://www.instagram.com/martapey.art" class="social-link" target="_blank" title="Instagram">
                                     <ion-icon name="logo-instagram"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="https://www.patreon.com/martapey" class="social-link" target="_blank" title="Patreon">
+                                    <img class="social-image" src="images/icon_patreon.svg">
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="https://bsky.app/profile/martapey.bsky.social" class="social-link" target="_blank" title="Bluesky">
+                                    <img class="social-image" src="images/icon_bluesky.svg">
                                 </a>
                             </li>
 
                             <li class="social-item">
-                                <a href="https://www.behance.net/martapey" class="social-link" target="_blank">
+                                <a href="https://www.behance.net/martapey" class="social-link" target="_blank" title="Behance">
                                     <ion-icon name="logo-behance"></ion-icon>
                                 </a>
                             </li>
 
                             <li class="social-item">
-                                <a href="https://www.x.com/martapey_art" class="social-link" target="_blank">
+                                <a href="https://www.x.com/martapey_art" class="social-link" target="_blank" title="Twitter">
                                     <ion-icon name="logo-twitter"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="https://www.twitch.tv/emapeyy" class="social-link" target="_blank">
+                                    <ion-icon name="logo-twitch"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="https://www.youtube.com/@martapey" class="social-link" target="_blank">
+                                    <ion-icon name="logo-youtube"></ion-icon>
                                 </a>
                             </li>
 
                         </ul>
 
-                        
+
                     </div>
+                    <div class="ipad-content">
+
+
+                        <div class="ipad-illustrations">
+                            <div class="profile">
+                                <img src="images/martapey_profile.jpg">
+                                <h4>martapey.art</h4>
+                                <button class="btn blue"><a href="https://instagram.com/martapey.art" target="_blank"> Follow</a></button>
+                            </div>
+
+
+
+
+                        </div>
+                        <div class="ipad-image">
+                            <img src="images/ipad_dibujo.png">
+                        </div>
+
+                    </div>
+                    <a href="#" class="scroll-top" title="Scroll to top">
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                        <p class="text-scroll">Scroll to top</p>
+                    </a>
                 </section>
                 <footer>
                     <p>2024 Marta Pey - Illustrator and Graphic Designer</p>
@@ -163,7 +447,7 @@
             </div>
         </div>
     </main>
-      <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

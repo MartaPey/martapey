@@ -25,8 +25,8 @@
                 <div class="header-display">
                     <button id="close-button" onclick="toggleHeader()">✖</button>
                     <div class="banner">
-                        <h3>Marta</h3>
-                        <h3> Pey</h3>
+                        <a href="index.html" class="navbar-link">
+                            <img src="images/logo_martapey.PNG"></a>
                     </div>
                     <div class="navigation">
                         <ul class="menu">
@@ -50,31 +50,54 @@
                                 </a>
                             </li>
 
-                            <li class="nav-item">
-                                <a href=contact.html class="navbar-link">Lets work!
+                            <li class="nav-item"> 
+                                <a href="https://patreon.com/martapey" class="navbar-link" target="_blank">
+                                    <img class="social-image" src="images/icon_patreon.svg" style="margin-right: 0.2em; padding-bottom: 5px;">
+                                 Patreon blog
                                 </a>
                             </li>
 
                         </ul>
+                       
                         <ul class="social-list">
+                            <div style="display: flex;">
 
                             <li class="social-item">
-                                <a href="https://www.instagram.com/martapey.art" class="social-link" target="_blank">
+                                <a href="https://www.instagram.com/martapey.art" class="social-link" target="_blank" title="Instagram">
                                     <ion-icon name="logo-instagram"></ion-icon>
                                 </a>
                             </li>
+                            
+                            <li class="social-item">
+                                <a href="https://bsky.app/profile/martapey.bsky.social" class="social-link" target="_blank" title="Bluesky">
+                                    <img class="social-image" src="images/icon_bluesky.svg">
+                                </a>
+                            </li>
 
                             <li class="social-item">
-                                <a href="https://www.behance.net/martapey" class="social-link" target="_blank">
+                                <a href="https://www.behance.net/martapey" class="social-link" target="_blank" title="Behance">
                                     <ion-icon name="logo-behance"></ion-icon>
                                 </a>
                             </li>
+                            </div>
+                            <div style="display: flex;">
 
                             <li class="social-item">
-                                <a href="https://www.x.com/martapey_art" class="social-link" target="_blank">
+                                <a href="https://www.x.com/martapey_art" class="social-link" target="_blank" title="Twitter">
                                     <ion-icon name="logo-twitter"></ion-icon>
                                 </a>
                             </li>
+                            <li class="social-item">
+                                <a href="https://www.twitch.tv/emapeyy" class="social-link" target="_blank">
+                                    <ion-icon name="logo-twitch"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="https://www.youtube.com/@martapey" class="social-link" target="_blank">
+                                    <ion-icon name="logo-youtube"></ion-icon>
+                                </a>
+                            </li>
+                            </div>
 
                         </ul>
                     </div>
@@ -83,69 +106,656 @@
             <button id="toggle-button" onclick="toggleHeader()">☰ </button>
 
             <div class="content">
-                <section class="projects">
-                    <h2>Commissions</h2><h3 style="color:lightgreen;">*NOW OPEN*</h3>
-                    <p>Please fill the commission form below or email me directly at <a href="mailto:martapey12@gmail.com">martapey12@gmail.com</a></p>
-                    <h3>How I work:</h3>
-                    <ol>
-                        <li>Fill the commission form linked down below! Select the type of commission you want and write a description of it (you can atach images, photos, sketches or other visual references to help me understand what you want).
-                        </li>
-                        <li>You will be contacted after I approve your commission request in order to review the details regarding prices and delivery dates.
-                        </li>
-                        <li>I create an illustration for you in my art style in full resolution that you will receive via email within 2-3 weeks after payment!</li>
-                    </ol>
+                <section class="projects comms">
+                    <h2>Commissions
+                    </h2>
 
-                    <h3>PRICES</h3>
-                    <div class="prices">
-                        <div class="price-1">
-                            <img src="images/il_02.jpg">
-                            <h4>Portrait</h4>
-                            <p>10€</p>
-                        </div>
-                        <div class="price-1">
-                            <img src="images/il_02.jpg">
-                            <h4>Half body</h4>
-                            <p>20€</p>
-                        </div>
+                    <p style="font-size: 20px; margin-bottom: 2em;">Here you will find a list of the most common <a href="#comm-types">types</a> of commissions I provide, along with a <a href="#calc-price">calculator</a> to estimate the price of the commission you wish to request. </p>
 
-                        <div class="price-1">
-                            <img src="images/il_02.jpg">
-                            <h4>Full body</h4>
-                            <p>30€</p>
+
+
+                    <div class="choose-comm">
+                        <div class="calc-price" id="calc-price">
+
+
+                            <div class="calc-fields">
+                                <h4>Commission calculator</h4>
+                                <div style="display:flex; gap:1em; justify-content: space-around;width:100%;">
+
+                                    <form action="/action_page.php" class="formulario">
+                                        <label for="type">Type</label>
+                                        <select name="types" id="typeSuma" class="dropdown">
+                                            <option value="0" disabled selected>Select option</option>
+                                            <option value="5">Portrait</option>
+                                            <option value="10">Half body</option>
+                                            <option value="15">Full body</option>
+                                        </select>
+                                    </form>
+
+                                    <form action="/action_page.php" class="formulario">
+                                        <label for="style">Style</label>
+                                        <select name="styles" id="styleMultiplicacion" class="dropdown">
+                                            <option value="1" selected>Lineart</option>
+                                            <option value="2">Digital color</option>
+                                            <option value="3">Digital complete (shadows & lighting)</option>
+                                        </select>
+                                    </form>
+                                </div>
+                                <div style="display:flex; gap:1em; justify-content: space-around;width:100%;">
+
+                                    <div class="formulario">
+                                        <div class="form-text">
+                                            <label for="charMultiplicacion">Characters</label><b> <span id="charMultiplicacionValue">1</span></b>
+                                        </div>
+                                        <input type="range" id="charMultiplicacion" min="1" max="20" step="1" value="1">
+                                    </div>
+                                    <div class="formulario">
+                                        <div class="form-text">
+                                            <label for="objSuma">Extra objects</label><b><span id="objSumaValue">0</span></b>
+                                        </div>
+                                        <input type="range" id="objSuma" min="0" max="10" step="1" value="0">
+                                    </div>
+                                </div>
+                                <form action="/action_page.php" class="formulario">
+                                    <label for="background">Background</label>
+                                    <select name="background" id="backSuma" class="dropdown">
+
+                                        <option value="0" selected>Flat color (free)</option>
+                                        <option value="15">Blank scene w/ 3 objects</option>
+                                        <option value="30">Detailed scene</option>
+                                    </select>
+                                </form>
+
+
+
+                                <div class="formulario">
+                                    <p>Extras</p>
+                                    <label>
+                                        <input type="checkbox" name="opcion" value="10"> Add layouts/titles (10€/u)
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="opcion" value="10"> Print ready (10€)
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="opcion" value="20"> PSD File (20€)
+                                    </label>
+                                </div>
+
+                                <div class="finalPrice">
+                                    <h4>Final price</h4>
+                                    <div class="price">
+                                        <h4><span id="contador">0</span> €</h4>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="calc-info">
+
+                                <p style="opacity:50%">
+                                    <ion-icon name="information-circle-outline"></ion-icon> This tool provides an approximate price estimate for your commission. To proceed with an order, please complete the form by clicking the button below. The final price will be confirmed after submission, taking the request's complexity into account.
+                                </p>
+
+                                <div class="btn blue"> <a href="https://forms.gle/KWNtKJNGgesFjCVp7" target="_blank">Order a commission </a>
+                                </div>
+                                <div class="btn yellow"><a href="terms-and-conditions.html">Terms and conditions (must read) </a>
+                                </div>
+                                <p><i>NOTE: This prices apply for personal use commissions only.
+                                        For commercial use commissions email me directly at <a href="mailto:martapey12@gmail.com" target="_blank"> martapey12@gmail.com</a>.</i></p>
+                                <p><i>Fore any other doubt, you can also message me at my instagram <a href="https://instagram.com/martapey.art" target="_blank"> @martapey.art</a>.</i></p>
+                            </div>
+                        </div>
+                        <h3 style="margin-bottom:0.5em; margin-top:0.5em;">Most frequent commission types:</h3>
+                        <div class="comm-types" id="comm-types">
+
+
+
+
+                            <div class="comm-type">
+
+                                <div class="comm-info">
+
+                                    <!-- Slider 4 -->
+                                    <div class="finalPrice ver">
+                                        <h4>Digital lineart portrait</h4>
+                                        <div class="price">
+                                            <h5>From 5€</h5>
+                                        </div>
+                                    </div>
+                                    <div class="comm-portada">
+                                        <div class="slider" id="slider4">
+
+                                            <div class="mySlides">
+                                                <div>
+                                                    <a href="#" class="dibuix" title="Imagen 1">
+                                                        <img src="comm/line03.PNG" alt="Imagen 1" loading="lazy" class="img"></a></div>
+                                            </div>
+                                            <div class="mySlides">
+                                                <div>
+                                                    <a href="#" class="dibuix" title="Imagen 1">
+                                                        <img src="comm/line02.PNG" alt="Imagen 2" loading="lazy" class="img"></a></div>
+                                            </div>
+                                            <div class="mySlides">
+                                                <div>
+                                                    <a href="#" class="dibuix" title="Imagen 1">
+                                                        <img src="comm/line01.PNG" alt="Imagen 3" loading="lazy" class="img"></a></div>
+                                            </div>
+                                            <button class="arrow prev" onclick="plusSlides(-1, 'slider4')">‹</button>
+                                            <button class="arrow next" onclick="plusSlides(1, 'slider4')">›</button>
+                                        </div>
+                                        <div class="row">
+                                            <div class="column">
+                                                <img class="demo cursor" src="comm/th_line03.PNG" onclick="currentSlide(1, 'slider4')" alt="Imagen 1" loading="lazy">
+                                            </div>
+                                            <div class="column">
+                                                <img class="demo cursor" src="comm/th_line02.PNG" onclick="currentSlide(2, 'slider4')" alt="Imagen 2" loading="lazy">
+                                            </div>
+                                            <div class="column">
+                                                <img class="demo cursor" src="comm/th_line01.PNG" onclick="currentSlide(3, 'slider4')" alt="Imagen 3" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="comm-text">
+                                        <div class="finalPrice hor">
+                                            <h4>Digital lineart portrait</h4>
+                                            <div class="price">
+                                                <h5>From 5€</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="comm-tags">
+                                            <div class="tag" title="Delivery time">
+                                                <ion-icon name="time-outline"></ion-icon> <b>2-4</b> days
+                                            </div>
+
+                                            <div class="tag" title="File size">
+                                                <ion-icon name="document-outline"></ion-icon> A4 / A3 size
+                                            </div>
+                                            <div class="tag" title="File size">
+                                                <ion-icon name="document-outline"></ion-icon> 300 DPI
+                                            </div>
+                                            <div class="tag" title="Art style">
+                                                <ion-icon name="brush-outline"></ion-icon> Digital
+                                            </div>
+                                        </div>
+                                        <div class="include-list">
+                                            <h5>Includes</h5>
+                                            <ul>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Lineart <b>portrait</b> drawing (5€/char)
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Preliminary sketch
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>B&W (monochromatic)
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Flat background
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Personal use
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>JPG/PNG/PDF Art file
+                                                </li>
+                                            </ul>
+                                            <h5>You choose</h5>
+                                            <ul>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Number of characters
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Half body Type (10€/char)
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Full body Type (15€/char)
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Add background/scene
+                                                </li>
+
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Add objects
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Add pet/animal
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Include layouts
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Print ready
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>PSD archive
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="comm-type">
+                                <div class="comm-info">
+                                    <div class="finalPrice ver">
+                                        <h4>Digital portrait</h4>
+                                        <div class="price">
+                                            <h5>From 15€</h5>
+                                        </div>
+                                    </div>
+                                    <!-- Slider 1 -->
+                                    <div class="comm-portada">
+                                        <div class="slider" id="slider1">
+                                            <div class="mySlides">
+                                                <div>
+                                                    <a href="#" class="dibuix" title="Imagen 1">
+                                                        <img src="comm/light_maria.png" alt="Imagen 1" loading="lazy" class="img"> </a></div>
+                                            </div>
+                                            <div class="mySlides">
+                                                <div>
+                                                    <a href="#" class="dibuix" title="Imagen 1">
+                                                        <img src="comm/dark_maria.png" alt="Imagen 2" loading="lazy" class="img"></a></div>
+                                            </div>
+                                            <div class="mySlides">
+                                                <div>
+                                                    <a href="#" class="dibuix" title="Imagen 1">
+                                                        <img src="comm/padrina.png" alt="Imagen 3" loading="lazy" class="img"></a></div>
+                                            </div>
+                                            <button class="arrow prev" onclick="plusSlides(-1, 'slider1')">‹</button>
+                                            <button class="arrow next" onclick="plusSlides(1, 'slider1')">›</button>
+                                        </div>
+                                        <div class="row">
+                                            <div class="column">
+                                                <img class="demo cursor" src="comm/th_light_maria.png" onclick="currentSlide(1, 'slider1')" alt="Imagen 1" loading="lazy">
+                                            </div>
+                                            <div class="column">
+                                                <img class="demo cursor" src="comm/th_dark_maria.png" onclick="currentSlide(2, 'slider1')" alt="Imagen 2" loading="lazy">
+                                            </div>
+                                            <div class="column">
+                                                <img class="demo cursor" src="comm/th_padrina.png" onclick="currentSlide(3, 'slider1')" alt="Imagen 3" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="comm-text">
+                                        
+                                            <div class="finalPrice hor">
+                                                <h4>Digital portrait</h4>
+                                                <div class="price">
+                                                    <h5>From 15€</h5>
+                                                </div>
+                                            </div>
+                                      
+
+                                        <div class="comm-tags">
+                                            <div class="tag" title="Delivery time">
+                                                <ion-icon name="time-outline"></ion-icon> <b>2-7</b> days
+                                            </div>
+
+                                            <div class="tag" title="File size">
+                                                <ion-icon name="document-outline"></ion-icon> A4 / A3 size
+                                            </div>
+                                            <div class="tag" title="File size">
+                                                <ion-icon name="document-outline"></ion-icon> 300 DPI
+                                            </div>
+                                            <div class="tag" title="Art style">
+                                                <ion-icon name="brush-outline"></ion-icon> Digital
+                                            </div>
+                                        </div>
+                                        <div class="include-list">
+                                            <h5>Includes</h5>
+                                            <ul>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>1 character portrait (15€/char)
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Preliminary sketch
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Color
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Lightning and shadows
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Solid background
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Personal use
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>JPG/PNG/PDF Art file
+                                                </li>
+                                            </ul>
+                                            <h5>You choose</h5>
+                                            <ul>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Number of characters
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Half body Type (30€/char)
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Full body Type (45€/char)
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Add background/scene
+                                                </li>
+
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Add objects
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Add pet/animal
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Include layouts
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Print ready
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>PSD archive
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="comm-type">
+                                <div class="comm-info">
+                                    <div class="finalPrice ver">
+                                        <h4>Digital full body character + scene</h4>
+                                        <div class="price">
+                                            <h5>From 75€</h5>
+                                        </div>
+                                    </div>
+                                    <div class="comm-portada">
+                                        <div class="slider" id="slider2">
+                                            <div class="mySlides">
+                                                <div>
+                                                    <a href="#" class="dibuix" title="Imagen 1">
+                                                        <img src="comm/picnic.png" alt="Imagen 1" loading="lazy" class="img"></a></div>
+                                            </div>
+                                            <div class="mySlides">
+                                                <div>
+                                                    <a href="#" class="dibuix" title="Imagen 1">
+                                                        <img src="comm/starwars_tlotr.png" alt="Imagen 2" loading="lazy" class="img"></a></div>
+                                            </div>
+                                            <div class="mySlides">
+                                                <div>
+                                                    <a href="#" class="dibuix" title="Imagen 1">
+                                                        <img src="comm/scape-room2.PNG" alt="Imagen 3" loading="lazy" class="img"></a></div>
+                                            </div>
+                                            <button class="arrow prev" onclick="plusSlides(-1, 'slider2')">‹</button>
+                                            <button class="arrow next" onclick="plusSlides(1, 'slider2')">›</button>
+                                        </div>
+                                        <div class="row">
+                                            <div class="column">
+                                                <img class="demo cursor" src="comm/th_picnic.png" onclick="currentSlide(1, 'slider2')" alt="Imagen 1" loading="lazy">
+                                            </div>
+                                            <div class="column">
+                                                <img class="demo cursor" src="comm/th_starwars_tlotr.png" onclick="currentSlide(2, 'slider2')" alt="Imagen 2" loading="lazy">
+                                            </div>
+                                            <div class="column">
+                                                <img class="demo cursor" src="comm/th_scape-room.PNG" onclick="currentSlide(3, 'slider2')" alt="Imagen 3" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="comm-text">
+                                        
+                                            <div class="finalPrice hor">
+                                                <h4>Digital full body character + scene</h4>
+                                                <div class="price">
+                                                    <h5>From 75€</h5>
+                                                </div>
+                                            </div>
+
+                                        <div class="comm-tags">
+                                            <div class="tag" title="Delivery time">
+                                                <ion-icon name="time-outline"></ion-icon> <b>4-10</b> days
+                                            </div>
+
+                                            <div class="tag" title="File size">
+                                                <ion-icon name="document-outline"></ion-icon> A4 / A3 size
+                                            </div>
+                                            <div class="tag" title="File size">
+                                                <ion-icon name="document-outline"></ion-icon> 300 DPI
+                                            </div>
+                                            <div class="tag" title="Art style">
+                                                <ion-icon name="brush-outline"></ion-icon> Digital
+                                            </div>
+                                        </div>
+                                        <div class="include-list">
+                                            <h5>Includes</h5>
+                                            <ul>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>1 character full body (45€/char)
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Detailed scene (+30€)
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Preliminary sketch
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Color
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Shadows & Lightning
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Personal use
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>JPG/PNG/PDF Art file
+                                                </li>
+                                            </ul>
+                                            <h5>You choose</h5>
+                                            <ul>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Number of characters
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Portrait Type (15€/char)
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Half body Type (30€/char)
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Add background/scene
+                                                </li>
+
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Add objects
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Add pet/animal
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Include layouts
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Print ready
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>PSD archive
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="comm-type">
+                                <div class="comm-info">
+                                    <div class="finalPrice ver">
+                                        <h4>Digital half body character + layout</h4>
+                                        <div class="price">
+                                            <h5>From 40€</h5>
+                                        </div>
+                                    </div>
+                                    <div class="comm-portada">
+                                        <div class="slider" id="slider3">
+                                            <div class="mySlides">
+                                                <div>
+                                                    <a href="#" class="dibuix" title="Imagen 1">
+                                                        <img src="comm/50years.png" alt="Imagen 1" loading="lazy" class="img"></a></div>
+                                            </div>
+                                            <div class="mySlides">
+
+                                                <div>
+                                                    <a href="#" class="dibuix" title="Imagen 1">
+                                                        <img src="comm/tita.PNG" alt="Imagen 2" loading="lazy" class="img"></a></div>
+                                            </div>
+                                            <div class="mySlides">
+                                                <div>
+                                                    <a href="#" class="dibuix" title="Imagen 1">
+                                                        <img src="comm/familia.jpg" alt="Imagen 3" loading="lazy" class="img"> </a></div>
+                                            </div>
+                                            <button class="arrow prev" onclick="plusSlides(-1, 'slider3')">‹</button>
+                                            <button class="arrow next" onclick="plusSlides(1, 'slider3')">›</button>
+                                        </div>
+                                        <div class="row">
+                                            <div class="column">
+                                                <img class="demo cursor" src="comm/th_50years.png" onclick="currentSlide(1, 'slider3')" alt="Imagen 1" loading="lazy">
+                                            </div>
+                                            <div class="column">
+                                                <img class="demo cursor" src="comm/th_tita.PNG" onclick="currentSlide(2, 'slider3')" alt="Imagen 2" loading="lazy">
+                                            </div>
+                                            <div class="column">
+                                                <img class="demo cursor" src="comm/th_familia.jpg" onclick="currentSlide(3, 'slider3')" alt="Imagen 3" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="comm-text">
+                                        <div style="display:flex;justify-content: space-between; gap:0.5em;">
+                                            <div class="finalPrice hor">
+                                                <h4>Digital half body character + layout</h4>
+                                                <div class="price">
+                                                    <h5>From 40€</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="comm-tags">
+                                            <div class="tag" title="Delivery time">
+                                                <ion-icon name="time-outline"></ion-icon> <b>4-10</b> days
+                                            </div>
+
+                                            <div class="tag" title="File size">
+                                                <ion-icon name="document-outline"></ion-icon>A4 / A3 size
+                                            </div>
+                                            <div class="tag" title="File size">
+                                                <ion-icon name="document-outline"></ion-icon>300 DPI
+                                            </div>
+                                            <div class="tag" title="Art style">
+                                                <ion-icon name="brush-outline"></ion-icon>Digital
+                                            </div>
+                                        </div>
+                                        <div class="include-list">
+                                            <h5>Includes</h5>
+                                            <ul>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>1 character half body (30€/char)
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Personalized layout/titles (10€/each)
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Preliminary sketch
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Color
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Shadows & lightning
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Solid background
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>Personal use
+                                                </li>
+                                                <li class="include">
+                                                    <ion-icon name="checkmark-outline"></ion-icon>JPG/PNG/PDF Art file
+                                                </li>
+                                            </ul>
+                                            <h5>You choose</h5>
+                                            <ul>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Number of characters
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Portrait Type (15€/char)
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Full body Type (45€/char)
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Add background/scene
+                                                </li>
+
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Add objects
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Add pet/animal
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Include layouts
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>Print ready
+                                                </li>
+                                                <li class="include unable">
+                                                    <ion-icon name="add-outline"></ion-icon>PSD archive
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
 
                     </div>
-                    <p><i>NOTE: This prices apply for personal use commissions only.
-                            For commercial use commissions email me directly at martapey12@gmail.com.
-                            This is the base price, which includes basic background (flat color) and a simple lightning like the pieces above.</i></p>
-                    <p><i>The artwork size is compatible with A3. For a specific size please let me know.</i></p>
-                    <h3> Additional costs</h3>
-                    <table>
-                        <tr>
-                            <th>Addition</th>
-                            <th>Price</th>
-                        </tr>
-                        <tr>
-                            <td>Background elements</td>
-                            <td>10-20€</td>
 
-                        </tr>
-                        <tr>
-                            <td>Additional character</td>
-                            <td>+50% of base price</td>
 
-                        </tr>
-                        <tr>
-                            <td>Extras</td>
-                            <td>5-10€ per item</td>
 
-                        </tr>
-                    </table>
-                    <div class="btn blue"> <a href="https://forms.gle/KWNtKJNGgesFjCVp7" target="_blank">Order a commission </a>
+
+
+
+
+
+
+
+                    <div class="lightbox">
+                        <button class="cerrar">✖</button>
+                        <img src="images/il_01.jpg" alt="Imagen 1" class="grande" loading="lazy">
+                        <button class="arrow prev">‹</button>
+                        <button class="arrow next">›</button>
                     </div>
-                    <div class="btn yellow"><a href="terms-and-conditions.html">Terms and conditions (must read) </a>
-                    </div>
+                    <a href="#" class="scroll-top" title="Scroll to top">
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                        <p class="text-scroll">Scroll to top</p>
+                    </a>
                 </section>
 
 
@@ -153,6 +763,7 @@
                 <footer>
                     <p>2024 Marta Pey - Illustrator and Graphic Designer</p>
                 </footer>
+
             </div>
         </div>
     </main>

@@ -25,12 +25,12 @@
                 <div class="header-display">
                     <button id="close-button" onclick="toggleHeader()">✖</button>
                     <div class="banner">
-                        <h3>Marta</h3>
-                        <h3> Pey</h3>
+                        <a href="index.html" class="navbar-link">
+                            <img src="images/logo_martapey.PNG"></a>
                     </div>
                     <div class="navigation">
                         <ul class="menu">
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a href="about.html" class="navbar-link">About
                                 </a>
                             </li>
@@ -50,31 +50,54 @@
                                 </a>
                             </li>
 
-                            <li class="nav-item">
-                                <a href=contact.html class="navbar-link">Lets work!
+                            <li class="nav-item"> 
+                                <a href="https://patreon.com/martapey" class="navbar-link" target="_blank">
+                                    <img class="social-image" src="images/icon_patreon.svg" style="margin-right: 0.2em; padding-bottom: 5px;">
+                                 Patreon blog
                                 </a>
                             </li>
 
                         </ul>
+                       
                         <ul class="social-list">
+                            <div style="display: flex;">
 
                             <li class="social-item">
-                                <a href="https://www.instagram.com/martapey.art" class="social-link" target="_blank">
+                                <a href="https://www.instagram.com/martapey.art" class="social-link" target="_blank" title="Instagram">
                                     <ion-icon name="logo-instagram"></ion-icon>
                                 </a>
                             </li>
+                            
+                            <li class="social-item">
+                                <a href="https://bsky.app/profile/martapey.bsky.social" class="social-link" target="_blank" title="Bluesky">
+                                    <img class="social-image" src="images/icon_bluesky.svg">
+                                </a>
+                            </li>
 
                             <li class="social-item">
-                                <a href="https://www.behance.net/martapey" class="social-link" target="_blank">
+                                <a href="https://www.behance.net/martapey" class="social-link" target="_blank" title="Behance">
                                     <ion-icon name="logo-behance"></ion-icon>
                                 </a>
                             </li>
+                            </div>
+                            <div style="display: flex;">
 
                             <li class="social-item">
-                                <a href="https://www.x.com/martapey_art" class="social-link" target="_blank">
+                                <a href="https://www.x.com/martapey_art" class="social-link" target="_blank" title="Twitter">
                                     <ion-icon name="logo-twitter"></ion-icon>
                                 </a>
                             </li>
+                            <li class="social-item">
+                                <a href="https://www.twitch.tv/emapeyy" class="social-link" target="_blank">
+                                    <ion-icon name="logo-twitch"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="https://www.youtube.com/@martapey" class="social-link" target="_blank">
+                                    <ion-icon name="logo-youtube"></ion-icon>
+                                </a>
+                            </li>
+                            </div>
 
                         </ul>
                     </div>
@@ -126,7 +149,7 @@
                             <div class="project-gallery">
 
                                 <div class="project-box">
-                                    <div class="item" style="background-image: url('images/pirates01.png');" alt="Un conte de pirates">
+                                    <div class="item" style="background-image: url('images/pirates01.png');" title="Un conte de pirates" alt="Un conte de pirates">
 
                                         <a class="overlay" href="pirates.html">
                                             <div class="text">
@@ -136,6 +159,23 @@
                                                     <p class="tag">2023</p>
                                                     <p class="tag">Illustration</p>
                                                     <p class="tag">Editorial Design</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="project-box">
+                                    <div class="item" style="background-image: url('images/engrunes01.png');" title="Llençar les engrunes" alt="Llençar les engrunes">
+
+                                        <a class="overlay" href="engrunes.html">
+                                            <div class="text">
+
+                                                <h3>Llençar les engrunes</h3>
+                                                <div class="tags-list">
+                                                    <p class="tag">2024</p>
+                                                    <p class="tag">Interactive webcomic</p>
+                                                    <p class="tag">UX & UI Design</p><p class="tag">Web Development</p>
                                                 </div>
                                             </div>
                                         </a>
@@ -281,7 +321,7 @@
                                         <a class="overlay" href="creactive.html">
                                             <div class="text">
 
-                                                <h3>Creactive</h3>
+                                             <h3>Creactive</h3>
                                                 <div class="tags-list">
                                                     <p class="tag">2022</p>
                                                     <p class="tag">UX & UI Design</p>
@@ -351,6 +391,40 @@
                         </div>
 
                         <div class="tab-pane fade" id="pills-novels" role="tabpanel" aria-labelledby="pills-novels-tab">
+                            <div class="project-gallery">
+                            <div class="project-box">
+                                    <div class="item" style="background-image: url('images/pirates01.png');" title="Un conte de pirates" alt="Un conte de pirates">
+
+                                        <a class="overlay" href="pirates.html">
+                                            <div class="text">
+
+                                                <h3>Un conte de pirates</h3>
+                                                <div class="tags-list">
+                                                    <p class="tag">2023</p>
+                                                    <p class="tag">Illustration</p>
+                                                    <p class="tag">Editorial Design</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="project-box">
+                                    <div class="item" style="background-image: url('images/engrunes01.png');" title="Llençar les engrunes" alt="Llençar les engrunes">
+
+                                        <a class="overlay" href="engrunes.html">
+                                            <div class="text">
+
+                                                <h3>Llençar les engrunes</h3>
+                                                <div class="tags-list">
+                                                    <p class="tag">2024</p>
+                                                    <p class="tag">Interactive webcomic</p>
+                                                    <p class="tag">UX & UI Design</p><p class="tag">Web Development</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
 
 
 

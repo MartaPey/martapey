@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css.css">
+
 </head>
 
 <body>
@@ -25,8 +26,8 @@
                 <div class="header-display">
                     <button id="close-button" onclick="toggleHeader()">✖</button>
                     <div class="banner">
-                        <h3>Marta</h3>
-                        <h3> Pey</h3>
+                        <a href="index.html" class="navbar-link">
+                            <img src="images/logo_martapey.PNG"></a>
                     </div>
                     <div class="navigation">
                         <ul class="menu">
@@ -40,7 +41,7 @@
                                 </a>
                             </li>
 
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a href="illustrations.html" class="navbar-link active">Illustrations
                                 </a>
                             </li>
@@ -50,31 +51,54 @@
                                 </a>
                             </li>
 
-                            <li class="nav-item">
-                                <a href=contact.html class="navbar-link">Lets work!
+                            <li class="nav-item"> 
+                                <a href="https://patreon.com/martapey" class="navbar-link" target="_blank">
+                                    <img class="social-image" src="images/icon_patreon.svg" style="margin-right: 0.2em; padding-bottom: 5px;">
+                                 Patreon blog
                                 </a>
                             </li>
 
                         </ul>
+                       
                         <ul class="social-list">
+                            <div style="display: flex;">
 
                             <li class="social-item">
-                                <a href="https://www.instagram.com/martapey.art" class="social-link" target="_blank">
+                                <a href="https://www.instagram.com/martapey.art" class="social-link" target="_blank" title="Instagram">
                                     <ion-icon name="logo-instagram"></ion-icon>
                                 </a>
                             </li>
+                            
+                            <li class="social-item">
+                                <a href="https://bsky.app/profile/martapey.bsky.social" class="social-link" target="_blank" title="Bluesky">
+                                    <img class="social-image" src="images/icon_bluesky.svg">
+                                </a>
+                            </li>
 
                             <li class="social-item">
-                                <a href="https://www.behance.net/martapey" class="social-link" target="_blank">
+                                <a href="https://www.behance.net/martapey" class="social-link" target="_blank" title="Behance">
                                     <ion-icon name="logo-behance"></ion-icon>
                                 </a>
                             </li>
+                            </div>
+                            <div style="display: flex;">
 
                             <li class="social-item">
-                                <a href="https://www.x.com/martapey_art" class="social-link" target="_blank">
+                                <a href="https://www.x.com/martapey_art" class="social-link" target="_blank" title="Twitter">
                                     <ion-icon name="logo-twitter"></ion-icon>
                                 </a>
                             </li>
+                            <li class="social-item">
+                                <a href="https://www.twitch.tv/emapeyy" class="social-link" target="_blank">
+                                    <ion-icon name="logo-twitch"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="https://www.youtube.com/@martapey" class="social-link" target="_blank">
+                                    <ion-icon name="logo-youtube"></ion-icon>
+                                </a>
+                            </li>
+                            </div>
 
                         </ul>
                     </div>
@@ -113,78 +137,157 @@
                         <div class="tab-pane digital fade show active" id="pills-digital" role="tabpanel" aria-labelledby="pills-digital-tab">
 
 
-                            <div class="illustrations-gallery">
-                               
+                            <ul class="gallery">
 
-                               
-                                    <img src="images/il_01.jpg">
-                                    <img src="images/il_02.jpg">
-                                    <img src="images/il_03.jpg">
-                                    <img src="images/il_04.jpg">
-                                    <img src="images/il_05.jpg">
-                                    <img src="images/il_06.jpg">
-                                    <img src="images/il_07.jpg">
-                                    <img src="images/il_08.jpg">
-                                    <img src="images/il_09.jpg">
-                                    <img src="images/il_10.jpg">
-                                    <img src="images/il_11.jpg">
-                                    <img src="images/il_12.jpg">
-                                    <img src="images/il_13.jpg">
-                                    <img src="images/il_14.jpg">
-                                    <img src="images/il_15.jpg">
-                                    <img src="images/il_16.jpg">
-                                    <img src="images/il_17.jpg">
-                                    <img src="images/il_18.jpg">
-                                    <img src="images/il_19.jpg">
-                                    <img src="images/il_20.jpg">
-                                    <img src="images/il_21.jpg">
-                                    <img src="images/il_22.jpg">
-                                    <img src="images/il_23.jpg">
-                                    <img src="images/il_24.jpg">
-                                    <img src="images/il_25.jpg">
-                                    <img src="images/il_26.jpg">
-                               
-                                
 
-                            </div>
+
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Arch knight">
+                                        <img src="images/il_26.PNG" alt="Arch knight illustration" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Girl with gap">
+                                        <img src="images/il_01.jpg" alt="Girl with gap illustration" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Merry chrisis">
+                                        <img src="images/il_02.jpg" alt="Merry chrisis illustration" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Flying girl">
+                                        <img src="images/il_03.jpg" alt="Flying girl illustration" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Emma and Mary">
+                                        <img src="images/il_04.jpg" alt="Emma and Mary illustration" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Disaster">
+                                        <img src="images/il_05.jpg" alt="Disaster illustration" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_06.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_07.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_08.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_09.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_10.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_11.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_12.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_13.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_14.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_15.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_16.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_17.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_18.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_19.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_20.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_21.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_22.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_23.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_24.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 2">
+                                        <img src="images/il_25.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+
+
+
+
+                            </ul>
+
+
+
                         </div>
                         <div class="tab-pane traditional fade show" id="pills-traditional" role="tabpanel" aria-labelledby="pills-traditional-tab">
 
-                                <div class="illustrations-gallery">
+                            <ul class="gallery">
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 1">
+                                        <img src="images/tr_ellie01.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 1">
+                                        <img src="images/tr_barbie.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 1">
+                                        <img src="images/tr_zoe.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 1">
+                                        <img src="images/tr_renee.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 1">
+                                        <img src="images/tr_rey.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 1">
+                                        <img src="images/tr_natalie.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 1">
+                                        <img src="images/tr_abby01.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 1">
+                                        <img src="images/tr_ellie02.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                                <li class="li">
+                                    <a href="#" class="dibuix" title="Imagen 1">
+                                        <img src="images/tr_zhavia.jpg" alt="Imagen 1" class="img" loading="lazy"></a></li>
+                            </ul>
+                                
 
-                                    <div class="gallery-column">
-                                        <img class="box-image" src="images/tr_ellie01.jpg" alt="Un conte de pirates">
-                                        <img class="box-image" src="images/tr_barbie.jpg" alt="Un conte de pirates">
-                                        <img class="box-image" src="images/tr_zoe.jpg" alt="Un conte de pirates"></div>
-                                    <div class="gallery-column">
-                                        <img class="box-image" src="images/tr_renee.jpg" alt="Un conte de pirates">
-                                        <img class="box-image" src="images/tr_rey.jpg" alt="Un conte de pirates">
-                                        <img class="box-image" src="images/tr_natalie.jpg" alt="Un conte de pirates"></div>
-                                    <div class="gallery-column">
-                                        <img class="box-image" src="images/tr_abby01.jpg" alt="Un conte de pirates">
-                                        <img class="box-image" src="images/tr_ellie02.jpg" alt="Un conte de pirates">
-                                        <img class="box-image" src="images/tr_zhavia.jpg" alt="Un conte de pirates"></div>
 
-                               
-                            </div>
-
-
-                        </div>
+                        
 
 
                     </div>
-                </section>
 
 
-
-                <footer>
-                    <p>2024 Marta Pey - Illustrator and Graphic Designer</p>
-                </footer>
             </div>
+
+            <div class="lightbox">
+                <button class="cerrar">✖</button>
+                <img src="images/il_01.jpg" alt="Imagen 1" class="grande" loading="lazy">
+                <button class="arrow prev">‹</button>
+                <button class="arrow next">›</button>
+            </div>
+            </section>
+
+
+
+            <footer>
+                <p>2024 Marta Pey - Illustrator and Graphic Designer</p>
+            </footer>
+        </div>
         </div>
     </main>
-    
-     <script src="js/script.js"></script>
+
+    <script src="js/script.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
