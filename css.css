@@ -47,7 +47,7 @@ h1 {
 }
 
 h2 {
-    font-size: 72px;
+    font-size: 65px;
 }
 
 h3 {
@@ -307,6 +307,7 @@ ul.social-list {
 
 .content {
     margin-left:15em;
+    margin-right:3em;
     right:0;
     overflow-x: hidden;
 }
@@ -618,9 +619,9 @@ section .intro {
 }
 
 .icon-gallery {
-    display:inline-grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
+    display:flex;
+    flex-wrap: wrap;
+    gap:1em;
     width:fit-content;
 
 }
