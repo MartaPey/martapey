@@ -24,6 +24,45 @@ const next = document.querySelector('.lightbox .next');
 let rutas = [];
 let indiceActual = 0;
 
+
+//filtros proyectos
+ // Selecciona botones y proyectos
+        const filterButtons = document.querySelectorAll('.project-filter');
+        const projects = document.querySelectorAll('.project-box');
+
+        // Función para filtrar proyectos
+        function filterProjects(category) {
+            // Actualiza la clase activa en los botones
+            filterButtons.forEach(button => {
+                if (button.dataset.filter === category) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+
+            // Filtra los proyectos según la categoría seleccionada
+            projects.forEach(project => {
+                if (category === 'all' || project.dataset.category.includes(category)) {
+                    project.classList.add('show'); // Muestra proyectos coincidentes
+                } else {
+                    project.classList.remove('show'); // Oculta los demás
+                }
+            });
+        }
+
+        // Agrega eventos a los botones
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.dataset.filter;
+                filterProjects(category); // Llama a la función con la categoría correspondiente
+            });
+        });
+
+        // Mostrar todos los proyectos al cargar la página
+        filterProjects('all');
+
+
 // Llenar el arreglo con las rutas de las imágenes
 enlaces.forEach((cadaEnlace, i) => {
     rutas.push(cadaEnlace.querySelector('.img').src);
@@ -213,3 +252,5 @@ document.getElementById('objSuma').addEventListener('input', actualizarObjSuma);
 document.querySelectorAll('input[name="opcion"]').forEach(checkbox => {
     checkbox.addEventListener('change', actualizarSeleccion);
 });
+
+
