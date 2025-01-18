@@ -1,6 +1,18 @@
 'use strict';
 
+//header activar pagia actual
+fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
 
+            // Resaltar el título actual
+            const currentPage = document.body.getAttribute('data-page');
+            const activeLink = document.querySelector(`a[data-page="${currentPage}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active'); // Clase que resalta el link actual
+            }
+        });
 
 
 

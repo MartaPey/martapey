@@ -193,7 +193,7 @@ section {
     display: flex;
     border-style: solid;
     border-width: 1.5px;
-    margin: 0.2rem 0;
+    margin: 0;
     padding: 0.2rem 0.5rem;
     border-radius: 3rem;
     font-size: 15px;
@@ -435,11 +435,13 @@ section .intro {
 }
 .nav-filter-projects{
     display:flex;
+    flex-flow:wrap;
+    margin:0.5em 0 0.5em 0em;
 }
 
 .project-filter{
-    margin: 5px;
-    padding:10px 20px;
+    margin: 0.2em;
+    padding:0.2em 1em;
     cursor:pointer;
     background-color: white;
     border: none;
@@ -451,7 +453,7 @@ section .intro {
 .project-filter.active {
     background-color: var(--azul);
     border-radius: 3rem;
-    border:none;
+    border: none;
     color:white;
 }
 
@@ -574,6 +576,7 @@ section .intro {
     margin: 0.3rem;
     text-align: left;
     margin-bottom: 1rem;
+    font-size: 30px;
 }
 .projects-container.comms li{
     list-style: decimal;
@@ -585,7 +588,7 @@ section .intro {
     justify-content: flex-start;
     text-align: left;
     gap: 0.5em;
-    margin-top:0.7em;
+    margin-top:0.5em;
 }
 
 
