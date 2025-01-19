@@ -752,6 +752,7 @@ section .intro {
     justify-content: center;
     display: flex;
     justify-content: space-between;
+    
 }
 
 .project-open .text-side {

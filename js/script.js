@@ -15,6 +15,12 @@ fetch('header.html')
         });
 
 
+//footer igual
+fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
 
 //header lado
 function toggleHeader() {
