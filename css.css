@@ -29,7 +29,7 @@ h2,
 h3,
 h4,
 h5 {
-    line-height: 0.8em;
+    line-height: 1em;
     letter-spacing: -0.05em;
     font-weight: 600;
 }
@@ -119,6 +119,7 @@ a:hover {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 0.5em;
+    color:black;
 }
 
 
@@ -348,6 +349,11 @@ section .intro {
 
 .intro-content .text.esq {
     width: 30%;
+    display: flex;
+    background-image: url("images/pink_degrad.png");
+    background-attachment: fixed;
+    padding:3em;
+    border-radius: 2em;
 }
 
 .intro-content .text.dret {
@@ -485,7 +491,15 @@ section .intro {
     transition: all 0.5s ease;
     
 }
-
+.bloc .project-box .item{
+    aspect-ratio:1/1;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.bloc .project-box .item:hover {
+    background-size:cover;
+    transition: all 0.5s ease;
+}
 
 .project-box .item img {
     width: 100%;
