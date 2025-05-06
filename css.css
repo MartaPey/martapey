@@ -762,6 +762,20 @@ section .intro {
 
 }
 
+.project-images-fit{
+    display: flex;
+    gap:10px;
+    width:100%;
+    
+}
+
+.project-images-fit img{
+height:100%;
+max-width:90vw;
+}
+
+
+
 .project-open .project-text-image {
     justify-content: center;
     display: flex;
@@ -781,7 +795,7 @@ section .intro {
 .project-open .project-text-image.one img {
     width: 60%;
     border-radius: 2rem;
-    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
+    
 }
 
 .project-one-image {
@@ -791,7 +805,7 @@ section .intro {
     justify-content: center;
     margin: 2rem;
     border-radius: 2rem;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+   
 }
 
 
