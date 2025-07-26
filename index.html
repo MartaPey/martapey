@@ -1,228 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
     <title>Marta Pey - Portfolio</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/images/favicon/favicon.ico"
+    />
+  </head>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css.css">
-    <link rel="shortcut icon" type="image/png" href="/images/favicon/favicon.ico">
-</head>
-
-<body data-page="projects">
+  <body data-page="projects">
     <main>
+      <div class="main-content">
+        <header id="header"></header>
 
-        <div class="main-content">
+        <button id="toggle-button" onclick="toggleHeader()">☰</button>
 
+        <div class="content">
+          <section class="projects-container">
+            <h2>Projects</h2>
 
-            <header id="header"></header>
+            <nav class="nav-filter-projects">
+              <button class="project-filter" data-filter="all">
+                All projects
+              </button>
+              <button class="project-filter" data-filter="design">
+                Graphic Design
+              </button>
+              <button class="project-filter" data-filter="comics">
+                Comics
+              </button>
+              <button class="project-filter" data-filter="ux">UX & UI</button>
+              <button class="project-filter" data-filter="illustration">
+                Illustration
+              </button>
+              <button class="project-filter" data-filter="3d">3D</button>
+            </nav>
 
-            <button id="toggle-button" onclick="toggleHeader()">☰ </button>
+            <div class="project-gallery" id="projects">
+              <div class="project-box" data-category="comics illustration">
+                <div
+                  class="item"
+                  style="
+                    background-image: url('images/ultim-combat/ultim-combat-portada.png');
+                  "
+                  title="L'últim combat - Comic"
+                  alt="L'últim combat - Comic"
+                >
+                  <a class="overlay" href="ultim-combat.html">
+                    <div class="text">
+                      <h3>L'últim combat</h3>
+                      <div class="tags-list">
+                        <div class="tag">2025</div>
+                        <div class="tag">Comic</div>
 
-
-            <div class="content">
-
-                <section class="projects-container">
-                    <h2>Projects</h2>
-
-
-
-                    <nav class="nav-filter-projects">
-
-                        <button class="project-filter" data-filter="all">
-                            All projects</button>
-                        <button class="project-filter" data-filter="design">
-                            Graphic Design</button>
-                        <button class="project-filter" data-filter="comics">
-                            Comics</button>
-                        <button class="project-filter" data-filter="ux">
-                            UX & UI</button>
-                        <button class="project-filter" data-filter="illustration">
-                            Illustration</button>
-                        <button class="project-filter" data-filter="3d">
-                            3D</button>
-
-
-
-                    </nav>
-
-
-                    <div class="project-gallery" id="projects">
-
-                        <div class="project-box" data-category="  design illustration">
-                            <div class="item" style="background-image: url('images/pirates01.png');" title="Un conte de pirates" alt="Un conte de pirates">
-
-                                <a class="overlay" href="pirates.html">
-                                    <div class="text">
-
-                                        <h3>Un conte de pirates</h3>
-                                        <div class="tags-list">
-                                            <p class="tag">2023</p>
-                                            <p class="tag">Illustration</p>
-                                            <p class="tag">Editorial Design</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+                        <div class="tag">
+                          Award 25th Nou Barris Comic Contest
                         </div>
-
-                        <div class="project-box" data-category=" comics design ux illustration">
-                            <div class="item" style="background-image: url('images/engrunes01.png');" title="Llençar les engrunes" alt="Llençar les engrunes">
-
-                                <a class="overlay" href="engrunes.html">
-                                    <div class="text">
-
-                                        <h3>Llençar les engrunes</h3>
-                                        <div class="tags-list">
-                                            <p class="tag">2024</p>
-                                            <p class="tag">Webcomic</p>
-                                            <p class="tag">UX & UI Design</p>
-                                            <p class="tag">Web Development</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="project-box" data-category=" design ux">
-                            <div class="item" style="background-image: url('images/portada_creactive.png')" ;>
-                                <a class="overlay" href="creactive.html">
-                                    <div class="text">
-
-                                        <h3>Creactive</h3>
-                                        <div class="tags-list">
-                                            <p class="tag">2022</p>
-                                            <p class="tag">UX & UI Design</p>
-                                            <p class="tag">Branding</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-box" data-category=" design ux">
-                            <div class="item" style="background-image: url(images/portada_exhibart.jpg)" ;>
-                                <a class="overlay" href="exhibart.html">
-                                    <div class="text">
-
-                                        <h3>Exhibart</h3>
-                                        <div class="tags-list">
-                                            <p class="tag">2022</p>
-                                            <p class="tag">UX & UI Design</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-box" data-category=" design ux">
-                            <div class="item" style="background-image: url(images/clarobscurs_credits01.gif)" );>
-                                <a class="overlay" href="clarobscurs.html">
-                                    <div class="text">
-                                        <h3>Clarobscurs</h3>
-                                        <div class="tags-list">
-                                            <p class="tag">2023</p>
-                                            <p class="tag">Branding</p>
-                                            <p class="tag">UX & UI Design</p>
-                                            <p class="tag">Credits</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-box" data-category=" 3d">
-                            <div class="item" style="background-image: url('images/sa-matao-portada.gif');" alt="Sa matao 3D animation">
-
-                                <a class="overlay" href="https://youtu.be/q1gp_0kNRBU?si=c987dn6LsjmgP5Wc" target="_blank">
-                                    <div class="text">
-
-                                        <h3>Sa matao</h3>
-                                        <div class="tags-list">
-                                            <p class="tag">2023</p>
-                                            <p class="tag">3D animation</p>
-
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-box" data-category=" 3d">
-                            <div class="item" style="background-image: url('images/cube-portada.gif');" alt="Cube prompt 3D animation">
-
-                                <a class="overlay" href="https://www.artstation.com/artwork/8b6g0m" target="_blank">
-                                    <div class="text">
-
-                                        <h3>Cube prompt</h3>
-                                        <div class="tags-list">
-                                            <p class="tag">2023</p>
-                                            <p class="tag">3D animation</p>
-
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-box" data-category=" 3d">
-                            <div class="item" style="background-image: url('images/abisme_portada.gif');" alt="Cube prompt 3D animation">
-
-                                <a class="overlay" href="https://vimeo.com/1081592953" target="_blank">
-                                    <div class="text">
-
-                                        <h3>Visuals "A l'abisme"</h3>
-                                        <div class="tags-list">
-                                            <p class="tag">2023</p>
-                                            <p class="tag">3D animation</p>
-                                            <p class="tag">Stage visuals</p>
-
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-box" data-category=" illustration design">
-                            <div class="item" style="background-image: url(images/portada_brainsick.png)" ;>
-                                <a class="overlay" href="brainsick.html">
-                                    <div class="text">
-
-                                        <h3>Brainsick</h3>
-                                        <div class="tags-list">
-                                            <p class="tag">2020</p>
-                                            <p class="tag">Illustration</p>
-                                            <p class="tag">Editorial Design</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                      </div>
                     </div>
+                  </a>
+                </div>
+              </div>
 
+              <div class="project-box" data-category="  design ux">
+                <div
+                  class="item"
+                  style="
+                    background-image: url('images/grandvoyage/newsletter_proposal.png');
+                  "
+                  title="GrandVoyage"
+                  alt="GrandVoyage"
+                >
+                  <a class="overlay" href="grandvoyage.html">
+                    <div class="text">
+                      <h3>GrandVoyage</h3>
+                      <div class="tags-list">
+                        <div class="tag">2024</div>
+                        <div class="tag">UX & UI Design</div>
 
+                        <div class="tag">Google Ads Banners</div>
+                        <div class="tag">Brand Identity</div>
+                        <div class="tag">Newsletter design</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
 
+              <div class="project-box" data-category="  design illustration">
+                <div
+                  class="item"
+                  style="background-image: url('images/pirates01.png')"
+                  title="Un conte de pirates"
+                  alt="Un conte de pirates"
+                >
+                  <a class="overlay" href="pirates.html">
+                    <div class="text">
+                      <h3>Un conte de pirates</h3>
+                      <div class="tags-list">
+                        <p class="tag">2023</p>
+                        <p class="tag">Illustration</p>
+                        <p class="tag">Editorial Design</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
 
-                    <a href="#" class="scroll-top" title="Scroll to top">
-                        <ion-icon name="arrow-up-outline"></ion-icon>
-                        <p class="text-scroll">Scroll to top</p>
-                    </a>
-                </section>
+              <div
+                class="project-box"
+                data-category=" comics design ux illustration"
+              >
+                <div
+                  class="item"
+                  style="
+                    background-image: url('images/engrunes/engrunes-portada.png');
+                  "
+                  title="Llençar les engrunes"
+                  alt="Llençar les engrunes"
+                >
+                  <a class="overlay" href="engrunes.html">
+                    <div class="text">
+                      <h3>Llençar les engrunes</h3>
+                      <div class="tags-list">
+                        <p class="tag">2024</p>
+                        <p class="tag">Webcomic</p>
+                        <p class="tag">UX & UI Design</p>
+                        <p class="tag">Web Development</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
 
-
-
-                <footer id="footer"> </footer>
+              <div class="project-box" data-category=" design ux">
+                <div
+                  class="item"
+                  style="background-image: url('images/portada_creactive.png')"
+                  ;
+                >
+                  <a class="overlay" href="creactive.html">
+                    <div class="text">
+                      <h3>Creactive</h3>
+                      <div class="tags-list">
+                        <p class="tag">2022</p>
+                        <p class="tag">UX & UI Design</p>
+                        <p class="tag">Branding</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="project-box" data-category=" design ux">
+                <div
+                  class="item"
+                  style="background-image: url(images/portada_exhibart.jpg)"
+                  ;
+                >
+                  <a class="overlay" href="exhibart.html">
+                    <div class="text">
+                      <h3>Exhibart</h3>
+                      <div class="tags-list">
+                        <p class="tag">2022</p>
+                        <p class="tag">UX & UI Design</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="project-box" data-category=" design ux">
+                <div
+                  class="item"
+                  style="
+                    background-image: url(images/clarobscurs_credits01.gif);
+                  "
+                  );
+                >
+                  <a class="overlay" href="clarobscurs.html">
+                    <div class="text">
+                      <h3>Clarobscurs</h3>
+                      <div class="tags-list">
+                        <p class="tag">2023</p>
+                        <p class="tag">Branding</p>
+                        <p class="tag">UX & UI Design</p>
+                        <p class="tag">Credits</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="project-box" data-category=" 3d">
+                <div
+                  class="item"
+                  style="background-image: url('images/sa-matao-portada.gif')"
+                  alt="Sa matao 3D animation"
+                >
+                  <a
+                    class="overlay"
+                    href="https://youtu.be/q1gp_0kNRBU?si=c987dn6LsjmgP5Wc"
+                    target="_blank"
+                  >
+                    <div class="text">
+                      <h3>Sa matao</h3>
+                      <div class="tags-list">
+                        <p class="tag">2023</p>
+                        <p class="tag">3D animation</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="project-box" data-category=" 3d">
+                <div
+                  class="item"
+                  style="background-image: url('images/cube-portada.gif')"
+                  alt="Cube prompt 3D animation"
+                >
+                  <a
+                    class="overlay"
+                    href="https://www.artstation.com/artwork/8b6g0m"
+                    target="_blank"
+                  >
+                    <div class="text">
+                      <h3>Cube prompt</h3>
+                      <div class="tags-list">
+                        <p class="tag">2023</p>
+                        <p class="tag">3D animation</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="project-box" data-category=" 3d">
+                <div
+                  class="item"
+                  style="background-image: url('images/abisme_portada.gif')"
+                  alt="Cube prompt 3D animation"
+                >
+                  <a
+                    class="overlay"
+                    href="https://vimeo.com/1081592953"
+                    target="_blank"
+                  >
+                    <div class="text">
+                      <h3>Visuals "A l'abisme"</h3>
+                      <div class="tags-list">
+                        <p class="tag">2023</p>
+                        <p class="tag">3D animation</p>
+                        <p class="tag">Stage visuals</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="project-box" data-category=" illustration design">
+                <div
+                  class="item"
+                  style="background-image: url(images/portada_brainsick.png)"
+                  ;
+                >
+                  <a class="overlay" href="brainsick.html">
+                    <div class="text">
+                      <h3>Brainsick</h3>
+                      <div class="tags-list">
+                        <p class="tag">2020</p>
+                        <p class="tag">Illustration</p>
+                        <p class="tag">Editorial Design</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
+
+            <a href="#" class="scroll-top" title="Scroll to top">
+              <ion-icon name="arrow-up-outline"></ion-icon>
+              <p class="text-scroll">Scroll to top</p>
+            </a>
+          </section>
+
+          <footer id="footer"></footer>
         </div>
+      </div>
     </main>
 
     <script src="js/script.js"></script>
 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
