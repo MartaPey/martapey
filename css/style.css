@@ -2397,8 +2397,66 @@ input:checked + .slider:before {
 }
 
 /* --- AJUSTES RESPONSIVE MÓVIL --- */
-@media (max-width: 900px) {
-  
+
+
+@media (max-width: 600px) {
+  /* 1. Evitar que el cuerpo principal haga scroll horizontal */
+  #dashboard-view {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  /* 2. Ocultar la barra lateral fuera de la pantalla en móvil */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    height: 100dvh;
+    transform: translateX(-100%); /* Oculta el sidebar a la izquierda */
+    transition: transform 0.3s ease;
+    z-index: 200;
+  }
+
+  .sidebar.open {
+    transform: translateX(
+      0
+    ); /* Aparece cuando se abre con el menú hamburguesa */
+  }
+
+  /* 3. Ajustar el contenedor principal para que use todo el ancho móvil */
+  .dashboard-main {
+    padding: 16px;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  /* Header del Dashboard en móvil */
+  .mobile-dashboard-header {
+    display: flex;
+    width: 100%;
+  }
+
+  .dashboard-header .main-title {
+    display: none;
+  }
+
+  /* 4. Adaptar la cuadrícula de tarjetas */
+  .file-grid {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(100%, 1fr)
+    ); /* Una sola columna adaptada al 100% */
+    gap: 16px;
+    width: 100%;
+  }
+
+  .file-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   
   /* 1. Ajustar la barra superior (Topbar) */
   .editor-topbar {
@@ -2471,65 +2529,7 @@ input:checked + .slider:before {
     flex-direction: column;
     align-items: center;
   }
-}
-
-@media (max-width: 600px) {
-  /* 1. Evitar que el cuerpo principal haga scroll horizontal */
-  #dashboard-view {
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-
-  /* 2. Ocultar la barra lateral fuera de la pantalla en móvil */
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    height: 100dvh;
-    transform: translateX(-100%); /* Oculta el sidebar a la izquierda */
-    transition: transform 0.3s ease;
-    z-index: 200;
-  }
-
-  .sidebar.open {
-    transform: translateX(
-      0
-    ); /* Aparece cuando se abre con el menú hamburguesa */
-  }
-
-  /* 3. Ajustar el contenedor principal para que use todo el ancho móvil */
-  .dashboard-main {
-    padding: 16px;
-    width: 100%;
-    max-width: 100vw;
-    box-sizing: border-box;
-  }
-
-  /* Header del Dashboard en móvil */
-  .mobile-dashboard-header {
-    display: flex;
-    width: 100%;
-  }
-
-  .dashboard-header .main-title {
-    display: none;
-  }
-
-  /* 4. Adaptar la cuadrícula de tarjetas */
-  .file-grid {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(100%, 1fr)
-    ); /* Una sola columna adaptada al 100% */
-    gap: 16px;
-    width: 100%;
-  }
-
-  .file-card {
-    width: 100%;
-    box-sizing: border-box;
-  }
+  
   .dashboard-main {
     padding: 12px;
   }
