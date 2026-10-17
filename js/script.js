@@ -2800,7 +2800,20 @@ document.querySelectorAll(".js-commissions").forEach((button) => {
 
 document
   .getElementById("btn-back-home")
-  ?.addEventListener("click", closeProject);
+  ?.addEventListener("click", () => closeProject());
+
+// Botón atrás del móvil / navegador
+window.addEventListener("popstate", (e) => {
+  const id = e.state && e.state.project;
+  if (id) {
+    openProject(id, { fromHistory: true });   // adelante
+  } else if (document.getElementById("editor-view").classList.contains("active")) {
+    closeProject({ fromHistory: true });      // atrás → inicio
+  }
+});
+
+// Al cargar la página, parte de un estado limpio (inicio)
+history.replaceState(null, "");
 
 document.addEventListener("click", (e) => {
   const jump = e.target.closest("[data-jump]");
@@ -2947,9 +2960,20 @@ function tagIconHTML(tag) {
 }
 
 // APERTURA Y NAVEGACIÓN
-function openProject(projectId) {
+function openProject(projectId, { fromHistory = false } = {}) {
   const currentProject = projectsData[projectId];
   if (!currentProject) return;
+
+  // NUEVO: registrar la navegación en el historial
+  if (!fromHistory) {
+    const state = { project: projectId };
+    if (history.state && history.state.project) {
+      history.replaceState(state, "");   // cambio de proyecto dentro del editor: no apiles entradas
+    } else {
+      history.pushState(state, "");      // entrada desde el inicio: nueva entrada
+    }
+  }
+
 
   currentActiveProject = currentProject;
   currentProjectId = projectId;
@@ -3016,9 +3040,16 @@ function softwareIconHTML(tool) {
   `;
 }
 
-function closeProject() {
+function closeProject({ fromHistory = false } = {}) {
+  // NUEVO: si venimos del botón, deja que el historial haga el trabajo
+  if (!fromHistory && history.state && history.state.project) {
+    history.back();   // dispara popstate, que vuelve a llamar a closeProject
+    return;
+  }
+
   closeStickerPicker();
   cancelStickerPlacement();
+
   document.documentElement.classList.remove("in-editor");
   document.getElementById("editor-view").classList.remove("active");
   document.getElementById("dashboard-view").classList.add("active");
