@@ -2398,12 +2398,7 @@ input:checked + .slider:before {
 
 /* --- AJUSTES RESPONSIVE MÓVIL --- */
 @media (max-width: 900px) {
-  /* 1. Evitar que el cuerpo principal haga scroll horizontal */
-  #dashboard-view {
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-
+  
   
   /* 1. Ajustar la barra superior (Topbar) */
   .editor-topbar {
@@ -2479,6 +2474,12 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 600px) {
+  /* 1. Evitar que el cuerpo principal haga scroll horizontal */
+  #dashboard-view {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
   /* 2. Ocultar la barra lateral fuera de la pantalla en móvil */
   .sidebar {
     position: fixed;
