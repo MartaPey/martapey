@@ -152,6 +152,7 @@ html {
   display: none !important;
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   position: absolute;
   top: 0;
   left: 0;
@@ -601,6 +602,7 @@ input:checked + .slider:before {
   left: 50%;
   transform: translateX(-50%);
   bottom: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));  
   display: flex;
   gap: 4px;
   background-color: var(--bg-toolbar);
@@ -2407,6 +2409,7 @@ input:checked + .slider:before {
     top: 0;
     left: 0;
     height: 100vh;
+    height: 100dvh;
     transform: translateX(-100%); /* Oculta el sidebar a la izquierda */
     transition: transform 0.3s ease;
     z-index: 200;
