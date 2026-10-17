@@ -3044,7 +3044,10 @@ const SECTION_GAP = FRAME_GAP_Y;
 const CANVAS_TOP = 12; // alineado con los paneles flotantes
 const MEDIA_SELECTOR = "img, video, iframe";
 
-const isFreeCanvas = () => FREE_CANVAS_PROJECTS.includes(currentProjectId);
+const MOBILE_SCROLL_BP = 768; // mismo breakpoint que usas en el layout
+const isFreeCanvas = () =>
+  FREE_CANVAS_PROJECTS.includes(currentProjectId) &&
+  window.innerWidth > MOBILE_SCROLL_BP;
 
 const LAYER_ICONS = {
   section: `<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><rect x="2" y="3.5" width="12" height="10" rx="1.5"/><path d="M2 6.5h5.5V3.5"/></svg>`,
@@ -3895,8 +3898,11 @@ window.addEventListener("resize", () => {
     document.getElementById("editor-view").classList.contains("active") &&
     currentActiveProject
   ) {
+    const wasScroll = viewport.classList.contains("is-scroll-canvas");
+    viewport.classList.toggle("is-scroll-canvas", !isFreeCanvas());  // NUEVO
     layoutCanvas();
     if (isFreeCanvas()) fitToScreen();
+    else if (wasScroll !== !isFreeCanvas()) fitToScreen();  // NUEVO: al cambiar de modo, reencuadra
     else updateTransform();
   }
 });
