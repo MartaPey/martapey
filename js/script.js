@@ -2785,7 +2785,8 @@ fileCards.forEach((card) => {
   });
 });
 
-document.getElementById("btn-about-me")?.addEventListener("click", () => {
+document.getElementById("btn-about-me")?.addEventListener("click", (e) => {
+  e.preventDefault();               // NUEVO
   openProject("about-me");
   closeMobilePanels();
 });
