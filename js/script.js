@@ -2807,9 +2807,12 @@ document
 window.addEventListener("popstate", (e) => {
   const id = e.state && e.state.project;
   if (id) {
-    openProject(id, { fromHistory: true });   // adelante
-  } else if (document.getElementById("editor-view").classList.contains("active")) {
-    closeProject({ fromHistory: true });      // atrás → inicio
+    openProject(id, { fromHistory: true });
+  } else if (
+    document.getElementById("editor-view").classList.contains("active") &&
+    !location.hash                       // NUEVO: ignora navegaciones a "#"
+  ) {
+    closeProject({ fromHistory: true });
   }
 });
 
