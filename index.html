@@ -1,330 +1,1005 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-    />
-    <title>Marta Pey - Portfolio</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css.css" />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="/images/favicon/favicon.ico"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marta Pey — Portfolio</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/profile-favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/profile-favicon-16.png" />
+    <link rel="apple-touch-icon" href="img/favicon/profile-apple-touch-icon.png" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
+  <body>
+    <script>
+      // Tema claro por defecto; "dark" solo si se eligió antes
+      try {
+        if (localStorage.getItem("portfolio-theme") !== "dark") document.body.classList.add("light-theme");
+      } catch (e) {
+        document.body.classList.add("light-theme");
+      }
+    </script>
+    <!-- OVERLAY MÓVIL PARA CERRAR MENÚS -->
+    <div id="mobile-overlay" class="mobile-overlay"></div>
 
-  <body data-page="projects">
-    <main>
-      <div class="main-content">
-        <header id="header"></header>
-
-        <button id="toggle-button" onclick="toggleHeader()">☰</button>
-
-        <div class="content">
-          <section class="projects-container">
-            <h2>Projects</h2>
-
-            <nav class="nav-filter-projects">
-              <button class="project-filter" data-filter="all">
-                All projects
-              </button>
-              <button class="project-filter" data-filter="design">
-                Graphic Design
-              </button>
-              <button class="project-filter" data-filter="comics">
-                Comics
-              </button>
-              <button class="project-filter" data-filter="ux">UX & UI</button>
-              <button class="project-filter" data-filter="illustration">
-                Illustration
-              </button>
-              <button class="project-filter" data-filter="3d">3D</button>
-            </nav>
-
-            <div class="project-gallery" id="projects">
-              <div class="project-box" data-category="comics illustration">
-                <div
-                  class="item"
-                  style="
-                    background-image: url('images/ultim-combat/ultim-combat-portada.png');
-                  "
-                  title="L'últim combat - Comic"
-                  alt="L'últim combat - Comic"
-                >
-                  <a class="overlay" href="ultim-combat.html">
-                    <div class="text">
-                      <h3>L'últim combat</h3>
-                      <div class="tags-list">
-                        <div class="tag">2025</div>
-                        <div class="tag">Comic</div>
-
-                        <div class="tag">
-                          Award 25th Nou Barris Comic Contest
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="project-box" data-category="  design ux">
-                <div
-                  class="item"
-                  style="
-                    background-image: url('images/grandvoyage/newsletter_proposal.png');
-                  "
-                  title="GrandVoyage"
-                  alt="GrandVoyage"
-                >
-                  <a class="overlay" href="grandvoyage.html">
-                    <div class="text">
-                      <h3>GrandVoyage</h3>
-                      <div class="tags-list">
-                        <div class="tag">2024</div>
-                        <div class="tag">UX & UI Design</div>
-
-                        <div class="tag">Google Ads Banners</div>
-                        <div class="tag">Brand Identity</div>
-                        <div class="tag">Newsletter design</div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="project-box" data-category="  design illustration">
-                <div
-                  class="item"
-                  style="background-image: url('images/pirates01.png')"
-                  title="Un conte de pirates"
-                  alt="Un conte de pirates"
-                >
-                  <a class="overlay" href="pirates.html">
-                    <div class="text">
-                      <h3>Un conte de pirates</h3>
-                      <div class="tags-list">
-                        <p class="tag">2023</p>
-                        <p class="tag">Illustration</p>
-                        <p class="tag">Editorial Design</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div
-                class="project-box"
-                data-category=" comics design ux illustration"
-              >
-                <div
-                  class="item"
-                  style="
-                    background-image: url('images/engrunes/engrunes-portada.png');
-                  "
-                  title="Llençar les engrunes"
-                  alt="Llençar les engrunes"
-                >
-                  <a class="overlay" href="engrunes.html">
-                    <div class="text">
-                      <h3>Llençar les engrunes</h3>
-                      <div class="tags-list">
-                        <p class="tag">2024</p>
-                        <p class="tag">Webcomic</p>
-                        <p class="tag">UX & UI Design</p>
-                        <p class="tag">Web Development</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="project-box" data-category=" design ux">
-                <div
-                  class="item"
-                  style="background-image: url('images/portada_creactive.png')"
-                  ;
-                >
-                  <a class="overlay" href="creactive.html">
-                    <div class="text">
-                      <h3>Creactive</h3>
-                      <div class="tags-list">
-                        <p class="tag">2022</p>
-                        <p class="tag">UX & UI Design</p>
-                        <p class="tag">Branding</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="project-box" data-category=" design ux">
-                <div
-                  class="item"
-                  style="background-image: url(images/portada_exhibart.jpg)"
-                  ;
-                >
-                  <a class="overlay" href="exhibart.html">
-                    <div class="text">
-                      <h3>Exhibart</h3>
-                      <div class="tags-list">
-                        <p class="tag">2022</p>
-                        <p class="tag">UX & UI Design</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="project-box" data-category=" design ux">
-                <div
-                  class="item"
-                  style="
-                    background-image: url(images/clarobscurs_credits01.gif);
-                  "
-                  );
-                >
-                  <a class="overlay" href="clarobscurs.html">
-                    <div class="text">
-                      <h3>Clarobscurs</h3>
-                      <div class="tags-list">
-                        <p class="tag">2023</p>
-                        <p class="tag">Branding</p>
-                        <p class="tag">UX & UI Design</p>
-                        <p class="tag">Credits</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="project-box" data-category=" 3d">
-                <div
-                  class="item"
-                  style="background-image: url('images/sa-matao-portada.gif')"
-                  alt="Sa matao 3D animation"
-                >
-                  <a
-                    class="overlay"
-                    href="https://youtu.be/q1gp_0kNRBU?si=c987dn6LsjmgP5Wc"
-                    target="_blank"
-                  >
-                    <div class="text">
-                      <h3>Sa matao</h3>
-                      <div class="tags-list">
-                        <p class="tag">2023</p>
-                        <p class="tag">3D animation</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="project-box" data-category=" 3d">
-                <div
-                  class="item"
-                  style="background-image: url('images/cube-portada.gif')"
-                  alt="Cube prompt 3D animation"
-                >
-                  <a
-                    class="overlay"
-                    href="https://www.artstation.com/artwork/8b6g0m"
-                    target="_blank"
-                  >
-                    <div class="text">
-                      <h3>Cube prompt</h3>
-                      <div class="tags-list">
-                        <p class="tag">2023</p>
-                        <p class="tag">3D animation</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="project-box" data-category=" 3d">
-                <div
-                  class="item"
-                  style="background-image: url('images/abisme_portada.gif')"
-                  alt="Cube prompt 3D animation"
-                >
-                  <a
-                    class="overlay"
-                    href="https://vimeo.com/1081592953"
-                    target="_blank"
-                  >
-                    <div class="text">
-                      <h3>Visuals "A l'abisme"</h3>
-                      <div class="tags-list">
-                        <p class="tag">2023</p>
-                        <p class="tag">3D animation</p>
-                        <p class="tag">Stage visuals</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="project-box" data-category=" illustration design">
-                <div
-                  class="item"
-                  style="background-image: url(images/portada_brainsick.png)"
-                  ;
-                >
-                  <a class="overlay" href="brainsick.html">
-                    <div class="text">
-                      <h3>Brainsick</h3>
-                      <div class="tags-list">
-                        <p class="tag">2020</p>
-                        <p class="tag">Illustration</p>
-                        <p class="tag">Editorial Design</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <a href="#" class="scroll-top" title="Scroll to top">
-              <ion-icon name="arrow-up-outline"></ion-icon>
-              <p class="text-scroll">Scroll to top</p>
-            </a>
-          </section>
-
-          <footer id="footer"></footer>
+    <!-- PANTALLA DE CARGA (SPLASH SCREEN) -->
+    <div id="splash-screen" class="splash-screen">
+      <div class="splash-content">
+        <div class="logo-wrapper">
+          <img
+            src="img/about/martapey_animation_cursor.gif"
+            alt="Logo Marta Pey"
+            class="splash-logo"
+            style="display: var(--display-light)"
+          />
+          <img
+            src="img/about/martapey_animation_cursor_white.gif"
+            alt="Logo Marta Pey"
+            class="splash-logo light-theme"
+            style="display: var(--display-dark)"
+          />
+          <div class="loading-sweep"></div>
+        </div>
+        <div class="loading-bar-track">
+          <div class="loading-bar-fill"></div>
         </div>
       </div>
-    </main>
+    </div>
 
+    <!-- 1. DASHBOARD VIEW -->
+    <div id="dashboard-view" class="view active">
+      <!-- HEADER MÓVIL PARA DASHBOARD -->
+      <header class="mobile-dashboard-header">
+        <button
+          class="menu-toggle-btn"
+          id="btn-toggle-sidebar"
+          aria-label="Toggle Menu"
+        >
+          ☰
+        </button>
+        <span class="mobile-brand">Marta Pey</span>
+      </header>
+
+      <aside class="sidebar" id="sidebar">
+        <div class="user-profile-wrapper">
+          <div
+            class="user-profile"
+            id="user-profile-btn"
+            title="Ver opciones y redes sociales"
+          >
+            <div class="avatar">
+              <img
+                src="img/avatars/martapey_profile.webp"
+                alt="Marta Pey"
+                class="avatar-img"
+              />
+            </div>
+            <span>Marta Pey ▾</span>
+          </div>
+
+          <!-- Desplegable del Perfil -->
+          <div class="profile-dropdown" id="profile-dropdown">
+            <button class="social-icon highlight-item" id="btn-profile-about">
+              <span
+                ><img
+                  class="icon-custom"
+                  src="img/icons/profile.svg"
+                  alt="Profile"
+              /></span>
+              About me
+            </button>
+            <hr class="dropdown-divider" />
+            <div class="dropdown-header">Socials & Contact</div>
+            <a
+              href="https://patreon.com/martapey"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon"
+            >
+              <img
+                src="img/icons/icon-patreon.svg"
+                class="icon-custom"
+                alt=""
+              />
+              Patreon blog
+            </a>
+            <a
+              href="https://www.instagram.com/martapey.art"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon"
+            >
+              <img
+                src="img/icons/icon-instagram.svg"
+                class="icon-custom"
+                alt=""
+              />
+              Instagram
+            </a>
+            <a
+              href="https://bsky.app/profile/martapey.bsky.social"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon"
+            >
+              <img
+                src="img/icons/icon-bluesky.svg"
+                class="icon-custom"
+                alt=""
+              />
+              Bluesky
+            </a>
+            <a
+              href="https://www.behance.net/martapey"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon"
+            >
+              <img
+                src="img/icons/icon-behance.svg"
+                class="icon-custom"
+                alt=""
+              />
+              Behance
+            </a>
+            <a
+              href="https://www.linkedin.com/in/martapey"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon"
+            >
+              <img
+                src="img/icons/icon-linkedin.svg"
+                class="icon-custom"
+                alt=""
+              />
+              LinkedIn
+            </a>
+            <a
+              href="https://www.twitch.tv/emapeyy"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon"
+            >
+              <img src="img/icons/icon-twitch.svg" class="icon-custom" alt="" />
+              Twitch
+            </a>
+            <a
+              href="https://www.youtube.com/@martapey"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon"
+            >
+              <img
+                src="img/icons/icon-youtube.svg"
+                class="icon-custom"
+                alt=""
+              />
+              YouTube
+            </a>
+            <hr class="dropdown-divider" />
+            <button class="social-icon" id="btn-profile-copy-link">
+              <img src="img/icons/link.svg" class="icon-custom" alt="" />
+              Copy link
+            </button>
+          </div>
+        </div>
+
+        <label class="home-search sidebar-search">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="text" id="home-search" placeholder="Search files" aria-label="Search files" />
+        </label>
+
+        <nav class="nav-menu">
+          <a href="#" class="nav-item active" data-category="all">
+            <img src="img/icons/icon-clock.svg" class="icon-custom" alt="" />
+            <span class="nav-label">Recents</span>
+          </a>
+          <a href="#" class="nav-item" id="btn-about-me">
+            <img src="img/icons/profile.svg" alt="" class="icon-custom" />
+            About Me
+          </a>
+          <a href="#" class="nav-item js-commissions">
+            <img src="img/icons/brush.svg" class="icon-custom" alt="" />
+            Commissions
+          </a>
+        </nav>
+
+        <div class="sidebar-section sidebar-team">
+          <small>Team project · Portfolio</small>
+          <nav class="nav-menu">
+            <a href="#" class="nav-item" data-category="illustrations">
+              <img src="img/icons/brush.svg" class="icon-custom" alt="" />
+              <span class="nav-label">Illustrations</span><span class="nav-count"></span>
+            </a>
+            <a href="#" class="nav-item" data-category="diseno-grafico">
+              <img src="img/icons/pen-tool.svg" class="icon-custom" alt="" />
+              <span class="nav-label">Graphic Design</span><span class="nav-count"></span>
+            </a>
+            <a href="#" class="nav-item" data-category="ux-ui">
+              <img src="img/icons/mobile-programming.svg" class="icon-custom" alt="" />
+              <span class="nav-label">UX & UI Design</span><span class="nav-count"></span>
+            </a>
+            <a href="#" class="nav-item" data-category="editorial">
+              <img src="img/icons/book-square.svg" class="icon-custom" alt="" />
+              <span class="nav-label">Editorial & Comic</span><span class="nav-count"></span>
+            </a>
+            <a href="#" class="nav-item" data-category="3d-animacion">
+              <img src="img/icons/3dcube.svg" class="icon-custom" alt="" />
+              <span class="nav-label">3D & Animation</span><span class="nav-count"></span>
+            </a>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="dashboard-main">
+        <div class="home-topbar">
+          <div class="home-topbar-right">
+            <button class="home-top-btn" data-open-project="about-me">About me</button>
+            <button class="home-top-btn is-primary js-commissions">Commission me</button>
+          </div>
+        </div>
+        <header class="dashboard-header">
+
+          <div class="main-header home-hero">
+            <h1 class="main-title">Marta Pey</h1>
+          <div class="comm-banner-container">
+            <div class="commission-banner">
+              <div class="commission-banner-info">
+                <h3>Have an idea in mind?</h3>
+                <h3 style="opacity: 80%">
+                  Let's discuss what we can achieve together
+                </h3>
+                <button class="commissions-btn js-commissions">
+                  Request a commission
+                </button>
+              </div>
+              <div class="commissions-image">
+                <img
+                  src="img/commissions/web/comm-illustration-crop.webp"
+                  alt="Illustration"
+                />
+              </div>
+            </div>
+            <button
+              class="panel-close-btn"
+              id="btn-close-banner"
+              aria-label="Cerrar"
+            >
+              ✕
+            </button>
+          </div>
+          </div>
+
+          <div class="home-toolbar">
+            <h1 id="category-title" class="home-title">Recents</h1>
+            <div class="home-controls">
+              <label class="home-sort">
+                <span>Sort:</span>
+                <select id="home-sort" aria-label="Sort files">
+                  <option value="default">Featured</option>
+                  <option value="modified">Last modified</option>
+                  <option value="name">Name</option>
+                </select>
+              </label>
+              <div class="home-view">
+                <button class="home-view-btn active" data-view="grid" title="Grid view" aria-label="Grid view">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+                </button>
+                <button class="home-view-btn" data-view="list" title="List view" aria-label="List view">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section class="file-grid" id="file-grid">
+          <article
+            class="file-card"
+            data-category="illustrations"
+            data-project-id="digital-illustrations"
+          >
+            <div class="file-thumbnail thumb-illustrations">
+              <img
+                src="img/thumbs/il_28.webp"
+                data-full="img/digital-illustrations/il_28.webp"
+                alt="Illustrations Gallery"
+                class="cover-img"
+                onerror="this.style.display = 'none'"
+              />
+            </div>
+            <div class="file-info">
+              <span class="file-icon">❖</span>
+              <div class="file-details">
+                <h4>Digital Illustrations</h4>
+                <p>Digital Artwork & Character Design</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="file-card"
+            data-category="illustrations"
+            data-project-id="traditional-illustrations"
+          >
+            <div class="file-thumbnail thumb-illustrations">
+              <img
+                src="img/thumbs/tr_ellie01.webp"
+                data-full="img/traditional-illustrations/tr_ellie01.webp"
+                alt="Illustrations Gallery"
+                class="cover-img"
+                onerror="this.style.display = 'none'"
+              />
+            </div>
+            <div class="file-info">
+              <span class="file-icon">❖</span>
+              <div class="file-details">
+                <h4>Traditional Illustrations</h4>
+                <p>Hand-drawn Artwork & Character Design</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="file-card"
+            data-category="editorial"
+            data-project-id="ultim-combat"
+          >
+            <div class="file-thumbnail">
+              <img
+                src="img/thumbs/portada-ultim-combat.webp"
+                data-full="img/projects/portada-ultim-combat.webp"
+                alt="L'Últim Combat"
+                class="cover-img"
+              />
+            </div>
+            <div class="file-info">
+              <span class="file-icon">❖</span>
+              <div class="file-details">
+                <h4>L'Últim Combat</h4>
+                <p>Comic & Illustration (4 Pages)</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="file-card"
+            data-category="diseno-grafico ux-ui"
+            data-project-id="cafler"
+          >
+            <div class="file-thumbnail">
+              <img
+                src="img/thumbs/cover-open-graph.webp"
+                data-full="img/projects/cafler/cover-open-graph.webp"
+                alt="Cafler AI"
+                class="cover-img"
+              />
+            </div>
+            <div class="file-info">
+              <span class="file-icon">❖</span>
+              <div class="file-details">
+                <h4>Cafler AI</h4>
+                <p>Branding, Web, Content & Merchandise</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="file-card"
+            data-category="editorial"
+            data-project-id="pirates"
+          >
+            <div class="file-thumbnail">
+              <img
+                src="img/thumbs/portada-pirates.webp"
+                data-full="img/projects/portada-pirates.webp"
+                alt="Un conte de pirates"
+                class="cover-img"
+              />
+            </div>
+            <div class="file-info">
+              <span class="file-icon">❖</span>
+              <div class="file-details">
+                <h4>Un conte de pirates</h4>
+                <p>Illustration & Editorial</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="file-card"
+            data-category="diseno-grafico"
+            data-project-id="grandvoyage"
+          >
+            <div class="file-thumbnail">
+              <img
+                src="img/thumbs/portada-grandvoyage.webp"
+                data-full="img/projects/portada-grandvoyage.webp"
+                alt="GrandVoyage"
+                class="cover-img"
+              />
+            </div>
+            <div class="file-info">
+              <span class="file-icon">❖</span>
+              <div class="file-details">
+                <h4>GrandVoyage</h4>
+                <p>Graphic Design, UX/UI & Branding</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="file-card"
+            data-category="editorial ux-ui"
+            data-project-id="engrunes"
+          >
+            <div class="file-thumbnail">
+              <img
+                src="img/thumbs/portada-engrunes.webp"
+                data-full="img/projects/portada-engrunes.webp"
+                alt="Llençar les engrunes"
+                class="cover-img"
+              />
+            </div>
+            <div class="file-info">
+              <span class="file-icon">❖</span>
+              <div class="file-details">
+                <h4>Llençar les engrunes</h4>
+                <p>Interactive Webcomic & Research Project</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="file-card"
+            data-category="editorial"
+            data-project-id="vamp-comic"
+          >
+            <div class="file-thumbnail">
+              <img
+                src="img/thumbs/portada-vamp-comic.webp"
+                data-full="img/projects/portada-vamp-comic.webp"
+                alt="Vamp"
+                class="cover-img"
+              />
+            </div>
+            <div class="file-info">
+              <span class="file-icon">❖</span>
+              <div class="file-details">
+                <h4>Vamp</h4>
+                <p>Comic & Illustration (4 Pages)</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="file-card"
+            data-category="ux-ui"
+            data-project-id="creactive"
+          >
+            <div class="file-thumbnail">
+              <img
+                src="img/thumbs/portada-creactive.webp"
+                data-full="img/projects/portada-creactive.webp"
+                alt="Creactive"
+                class="cover-img"
+              />
+            </div>
+            <div class="file-info">
+              <span class="file-icon">❖</span>
+              <div class="file-details">
+                <h4>Creactive</h4>
+                <p>Branding & Campaign</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="file-card"
+            data-category="ux-ui"
+            data-project-id="exhibart"
+          >
+            <div class="file-thumbnail">
+              <img
+                src="img/thumbs/portada-exhibart.webp"
+                data-full="img/projects/portada-exhibart.webp"
+                alt="Exhibart"
+                class="cover-img"
+              />
+            </div>
+            <div class="file-info">
+              <span class="file-icon">❖</span>
+              <div class="file-details">
+                <h4>Exhibart</h4>
+                <p>Exhibition & Spatial Design</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="file-card"
+            data-category="editorial"
+            data-project-id="clarobscurs"
+          >
+            <div class="file-thumbnail">
+              <video
+                src="img/projects/clarobscurs/Clarobscurs_title.mp4"
+                alt="Clarobscurs"
+                class="cover-img"
+                autoplay
+                muted
+                loop
+              ></video>
+            </div>
+            <div class="file-info">
+              <span class="file-icon">❖</span>
+              <div class="file-details">
+                <h4>Clarobscurs</h4>
+                <p>Illustration Series</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="file-card"
+            data-category="3d-animacion"
+            data-project-id="sa-matao"
+          >
+            <div class="file-thumbnail thumb-3d">
+              <video
+                src="img/projects/sa-matao-portada.mp4"
+                aria-label="Sa matao 3D"
+                class="cover-img"
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
+            </div>
+            <div class="file-info">
+              <span class="file-icon">❖</span>
+              <div class="file-details">
+                <h4>"Sa matao" 3D Animation</h4>
+                <p>3D Modeling & Animation</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="file-card"
+            data-category="3d-animacion"
+            data-project-id="cube-prompt"
+          >
+            <div class="file-thumbnail thumb-3d">
+              <video
+                src="img/projects/cube-portada.mp4"
+                aria-label="Cube Prompt 3D"
+                class="cover-img"
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
+            </div>
+            <div class="file-info">
+              <span class="file-icon">❖</span>
+              <div class="file-details">
+                <h4>Cube Prompt 3D</h4>
+                <p>ArtStation Showcase 3D</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="file-card"
+            data-category="diseno-grafico"
+            data-project-id="brainsick"
+          >
+            <div class="file-thumbnail thumb-diseno">
+              <img
+                src="img/thumbs/portada-brainsick.webp"
+                data-full="img/projects/portada-brainsick.webp"
+                alt="Brainsick"
+                class="cover-img"
+              />
+            </div>
+            <div class="file-info">
+              <span class="file-icon">❖</span>
+              <div class="file-details">
+                <h4>Brainsick</h4>
+                <p>Graphic & Visual Art</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="file-card"
+            style="border: 2px solid #8a38f5; background-color: #8a38f520"
+            data-category="all"
+            data-project-id="about-me"
+          >
+            <div class="file-thumbnail thumb-aboutme">
+              <img
+                src="img/thumbs/martapey_profile.webp"
+                data-full="img/avatars/martapey_profile.webp"
+                alt="Marta Pey"
+                class="cover-img"
+              />
+            </div>
+            <div class="file-info">
+              <span class="file-icon"
+                ><img
+                  src="img/icons/profile.svg"
+                  alt="Profile"
+                  class="icon-custom"
+              /></span>
+              <div class="file-details">
+                <h4>About Me</h4>
+                <p>Professional Profile & Contact</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="file-card"
+            data-category="all"
+            data-project-id="commissions"
+          >
+            <div class="file-thumbnail thumb-commissions">
+              <img
+                src="img/thumbs/comm-illustration.webp"
+                data-full="img/commissions/web/thumbs/comm-illustration.webp"
+                alt="Illustration Commissions"
+                class="cover-img"
+              />
+            </div>
+            <div class="file-info">
+              <span class="file-icon">❖</span>
+              <div class="file-details">
+                <h4>Commissions</h4>
+                <p>Interactive Pricing & Order Hub</p>
+              </div>
+            </div>
+          </article>
+      </section>
+      </main>
+    </div>
+
+    <!-- 2. FIGMA EDITOR CANVAS VIEW -->
+    <div id="editor-view" class="view">
+      <!-- Canvas infinito con rejilla de puntos -->
+      <div class="viewport tool-select" id="viewport">
+        <div class="canvas" id="canvas">
+          <!-- Canvas Dinámico -->
+        </div>
+      </div>
+
+      <!-- PANEL IZQUIERDO: PÁGINAS Y CAPAS -->
+      <aside class="ui-panel layers-panel" id="layers-panel">
+        <div class="lp-top">
+          <div class="lp-brand">
+            <img
+              src="img/avatars/mp_logofigma_linewhite.svg"
+              alt="Marta Pey"
+              class="lp-logo"
+            />
+            <button class="lp-home-btn" id="btn-back-home">
+              <img
+                src="img/icons/icon-arrow-left.svg"
+                alt=""
+                class="icon-custom"
+                style="width: 14px; height: 14px"
+              />
+              All projects
+            </button>
+            <button
+              class="lp-icon-btn lp-collapse-btn"
+              id="btn-collapse-layers"
+              title="Minimize panel"
+              aria-label="Minimize panel"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5" /><path d="M9 4v16" /></svg>
+            </button>
+            <button
+              class="lp-icon-btn lp-mobile-close"
+              id="btn-close-layers"
+              aria-label="Close layers"
+            >
+              ✕
+            </button>
+          </div>
+          <div class="lp-file">
+            <div class="lp-file-name" id="current-project-title">
+              Marta Pey Portfolio
+            </div>
+            <div class="lp-file-team">Marta Pey · Portfolio</div>
+          </div>
+        </div>
+
+        <div class="lp-scroll">
+          <div class="lp-group">
+            <div class="lp-group-head">
+              <span class="lp-group-title">Pages</span>
+              <button
+                class="lp-icon-btn"
+                id="btn-layer-search"
+                title="Search pages & layers"
+                aria-label="Search pages and layers"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
+              </button>
+            </div>
+            <input
+              type="text"
+              class="lp-search"
+              id="layer-search"
+              placeholder="Search pages & layers…"
+              hidden
+            />
+            <div class="lp-pages" id="pages-list"></div>
+          </div>
+          <div class="lp-group">
+            <div class="lp-group-title">Layers</div>
+            <div class="layers-list" id="layers-list"></div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- PANEL DERECHO: INFORMACIÓN DEL PROYECTO -->
+      <aside class="ui-panel properties-panel" id="properties-panel">
+        <div class="pp-top">
+          <div class="pp-avatars">
+            <img
+              src="img/avatars/martapey_profile.webp"
+              alt="Marta Pey"
+              title="Marta Pey"
+              class="pp-avatar"
+            />
+            <span class="pp-avatar pp-avatar-visitor" id="pp-visitor-avatar"></span>
+          </div>
+          <button
+            class="pp-icon-btn"
+            id="btn-present"
+            title="Present (full screen)"
+            aria-label="Present"
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M4.5 2.8v10.4L13 8Z" /></svg>
+          </button>
+          <div class="share-wrapper">
+            <button class="share-btn" id="btn-share-toggle">Contact</button>
+            <div class="share-dropdown" id="share-dropdown">
+              <button class="social-icon" data-open-project="about-me">
+                <img src="img/icons/profile.svg" class="icon-custom" alt="" />
+                About me
+              </button>
+              <button class="social-icon" data-open-project="commissions">
+                <img src="img/icons/brush.svg" class="icon-custom" alt="" />
+                Commissions
+              </button>
+              <hr class="dropdown-divider" />
+              <div class="dropdown-header">Socials & Contact</div>
+              <div class="share-mail-row">
+                <a href="mailto:martapey12@gmail.com" class="social-icon">
+                  <img src="img/icons/icon-mail.svg" class="icon-custom" alt="" />
+                  martapey12@gmail.com
+                </a>
+                <button
+                  class="mail-copy-btn copy-btn"
+                  data-copy="martapey12@gmail.com"
+                  title="Copy email address"
+                  aria-label="Copy email address"
+                >
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2.5"/><path d="M5 15h-.5A1.5 1.5 0 0 1 3 13.5v-9A1.5 1.5 0 0 1 4.5 3h9A1.5 1.5 0 0 1 15 4.5V5"/></svg>
+                </button>
+              </div>
+              <a
+                href="https://patreon.com/martapey"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon"
+              >
+                <img
+                  src="img/icons/icon-patreon.svg"
+                  class="icon-custom"
+                  alt=""
+                />
+                Patreon blog
+              </a>
+              <a
+                href="https://www.instagram.com/martapey.art"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon"
+              >
+                <img
+                  src="img/icons/icon-instagram.svg"
+                  class="icon-custom"
+                  alt=""
+                />
+                Instagram
+              </a>
+              <a
+                href="https://bsky.app/profile/martapey.bsky.social"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon"
+              >
+                <img
+                  src="img/icons/icon-bluesky.svg"
+                  class="icon-custom"
+                  alt=""
+                />
+                Bluesky
+              </a>
+              <a
+                href="https://www.behance.net/martapey"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon"
+              >
+                <img
+                  src="img/icons/icon-behance.svg"
+                  class="icon-custom"
+                  alt=""
+                />
+                Behance
+              </a>
+              <a
+                href="https://www.linkedin.com/in/martapey"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon"
+              >
+                <img
+                  src="img/icons/icon-linkedin.svg"
+                  class="icon-custom"
+                  alt=""
+                />
+                LinkedIn
+              </a>
+              <a
+                href="https://www.twitch.tv/emapeyy"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon"
+              >
+                <img
+                  src="img/icons/icon-twitch.svg"
+                  class="icon-custom"
+                  alt=""
+                />
+                Twitch
+              </a>
+              <a
+                href="https://www.youtube.com/@martapey"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon"
+              >
+                <img
+                  src="img/icons/icon-youtube.svg"
+                  class="icon-custom"
+                  alt=""
+                />
+                YouTube
+              </a>
+              <hr class="dropdown-divider" />
+              <button class="social-icon" id="btn-copy-link">
+                <img src="img/icons/link.svg" class="icon-custom" alt="" />
+                Copy link
+              </button>
+            </div>
+          </div>
+          <button
+            class="pp-icon-btn pp-mobile-close"
+            id="btn-close-panel"
+            aria-label="Close panel"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div class="pp-tabs">
+          <span class="pp-tab active">Design</span>
+          <button class="pp-zoom" id="zoom-display" title="Zoom to fit (Shift+1)">
+            100%
+          </button>
+        </div>
+
+        <div class="panel-scroll-area">
+          <div class="pp-section">
+            <h3 id="info-title" class="info-title">-</h3>
+            <div class="meta-row">
+              <span class="meta-label">Year</span>
+              <span id="info-year" class="meta-val">-</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Role</span>
+              <span id="info-role" class="meta-val">-</span>
+            </div>
+          </div>
+
+          <div class="pp-section">
+            <span class="section-title">Description</span>
+            <p id="info-desc" class="info-desc"></p>
+          </div>
+
+          <div class="pp-section">
+            <span class="section-title">Tags</span>
+            <div id="info-tags" class="tags-container"></div>
+          </div>
+
+          <div class="pp-section">
+            <span class="section-title">Software & tools</span>
+            <div id="info-software" class="software-container"></div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- BARRA DE HERRAMIENTAS INFERIOR -->
+      <div class="figma-toolbar">
+        <button
+          class="tool-btn tool-mobile"
+          id="btn-toggle-layers"
+          title="Layers"
+          aria-label="Layers"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5Z" /><path d="m3 13 9 5 9-5" /></svg>
+        </button>
+        <button class="tool-btn active" id="tool-select" title="Select (V)">
+          <img
+            src="img/icons/mouse.svg"
+            class="icon-custom"
+            alt="Select Tool"
+          />
+        </button>
+        <button class="tool-btn" id="tool-hand" title="Hand / Pan (H)">
+          <img
+            src="img/icons/hand_grab.svg"
+            class="icon-custom"
+            alt="Hand Tool"
+          />
+        </button>
+        <button class="tool-btn" id="tool-comment" title="Add Comment (C)">
+          <img
+            src="img/icons/message-notif.svg"
+            class="icon-custom"
+            alt="Comment Tool"
+          />
+        </button>
+        <button class="tool-btn" id="tool-text" title="Text (T)" aria-label="Text tool">
+          <svg class="tool-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7V5h14v2M12 5v14M9 19h6" /></svg>
+        </button>
+        <button class="tool-btn" id="tool-sticker" title="Stickers (E)" aria-label="Stickers">
+          <svg class="tool-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12A8.5 8.5 0 1 1 12 3.5" /><path d="M20.5 12c-4.7 0-8.5-3.8-8.5-8.5" /><path d="M8.5 14a4.5 4.5 0 0 0 6 1.2" /><path d="M9 9.5h.01" stroke-width="2.4" /></svg>
+        </button>
+        <hr class="panel-divider hor" />
+        <!-- Toggle Switch de Tema -->
+        <div class="theme-switch-wrapper">
+          <span class="theme-label"
+            ><img src="img/icons/moon.svg" class="icon-custom" alt=""
+          /></span>
+          <label class="theme-switch" for="checkbox-theme">
+            <input type="checkbox" id="checkbox-theme" />
+            <div class="slider round"></div>
+          </label>
+          <span class="theme-label"
+            ><img src="img/icons/sun.svg" class="icon-custom" alt=""
+          /></span>
+        </div>
+        <button
+          class="tool-btn tool-mobile"
+          id="btn-toggle-panel"
+          title="Project info"
+          aria-label="Project info"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9" /><path d="M12 11v5M12 8h.01" /></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="toast-msg" id="toast">Notificación</div>
     <script src="js/script.js"></script>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
