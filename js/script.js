@@ -2963,20 +2963,54 @@ function tagIconHTML(tag) {
   return `<span class="tag-icon" style="--tag-color:${color}"><img src="img/icons/${icon}" alt=""></span>`;
 }
 
+// ENLACES DIRECTOS: cada proyecto tiene su URL (martapey.com/about,
+// martapey.com/cafler…). En la web se usa la ruta; abriendo el index.html
+// desde el ordenador, el ancla (#about), porque ahí no se puede cambiar la ruta.
+const IS_WEB = location.protocol.startsWith("http");
+// Nombres cortos en la URL (el resto usa el id del proyecto tal cual)
+const URL_ALIASES = { about: "about-me" };
+
+function projectUrl(projectId) {
+  const slug = projectId
+    ? Object.keys(URL_ALIASES).find((a) => URL_ALIASES[a] === projectId) || projectId
+    : "";
+  if (IS_WEB) return `/${slug}`;
+  return slug ? `#${slug}` : location.pathname;
+}
+
+function projectFromUrl() {
+  const fromPath = IS_WEB
+    ? location.pathname.replace(/^\/+|\/+$/g, "").replace(/(^|\/)index\.html$/, "")
+    : "";
+  const slug = decodeURIComponent(fromPath || location.hash.replace(/^#\/?/, "")).toLowerCase();
+  const id = URL_ALIASES[slug] || slug;
+  return projectsData[id] ? id : null;
+}
+
+function setPageTitle(projectId) {
+  const project = projectId && projectsData[projectId];
+  document.title = !project
+    ? "Marta Pey — Portfolio"
+    : project.title.includes("Marta Pey")
+      ? project.title
+      : `${project.title} — Marta Pey`;
+}
+
 // APERTURA Y NAVEGACIÓN
 function openProject(projectId, { fromHistory = false } = {}) {
   const currentProject = projectsData[projectId];
   if (!currentProject) return;
 
-  // NUEVO: registrar la navegación en el historial
+  // NUEVO: registrar la navegación en el historial (con la URL del proyecto)
   if (!fromHistory) {
     const state = { project: projectId };
     if (history.state && history.state.project) {
-      history.replaceState(state, "");   // cambio de proyecto dentro del editor: no apiles entradas
+      history.replaceState(state, "", projectUrl(projectId)); // cambio de proyecto dentro del editor: no apiles entradas
     } else {
-      history.pushState(state, "");      // entrada desde el inicio: nueva entrada
+      history.pushState(state, "", projectUrl(projectId));    // entrada desde el inicio: nueva entrada
     }
   }
+  setPageTitle(projectId);
 
 
   currentActiveProject = currentProject;
@@ -3059,6 +3093,8 @@ function closeProject({ fromHistory = false } = {}) {
   document.getElementById("dashboard-view").classList.add("active");
   shareDropdown.classList.remove("show");
   closeMobilePanels();
+  setPageTitle(null);
+  if (projectFromUrl()) history.replaceState(null, "", projectUrl(null));
 }
 
 // =========================================================
@@ -5859,3 +5895,17 @@ document.getElementById("btn-close-banner")?.addEventListener("click", () => {
   setTimeout(() => (banner.style.display = "none"), 650);
 });
 
+
+// Al entrar por un enlace directo (martapey.com/about) se abre ese proyecto sin
+// pantalla de carga. Debajo queda el inicio, para que "atrás" o "All projects"
+// lleven a la portada en vez de salir de la web. Una dirección que no existe
+// vuelve al inicio.
+const projectAtLoad = projectFromUrl();
+if (projectAtLoad) {
+  history.replaceState(null, "", projectUrl(null));
+  openProject(projectAtLoad);
+  document.getElementById("splash-screen")?.classList.add("hidden");
+} else if (IS_WEB && !/^\/(index\.html)?$/.test(location.pathname)) {
+  history.replaceState(null, "", "/");
+  document.documentElement.classList.remove("direct-link");
+}
