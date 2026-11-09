@@ -4,6 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Marta Pey — Portfolio</title>
+    <script>
+      // Enlaces directos (martapey.com/about, /cafler…): sin pantalla de carga
+      (function () {
+        var web = location.protocol.indexOf("http") === 0;
+        // GitHub Pages: 404.html manda martapey.com/about a martapey.com/?r=about; aquí se recupera /about
+        var r = web && location.search.match(/[?&]r=([^&]*)/);
+        if (r) history.replaceState(null, "", "/" + decodeURIComponent(r[1]) + location.hash);
+        var slug = (web ? location.pathname.replace(/^\/+|\/+$/g, "").replace(/(^|\/)index\.html$/, "") : "") ||
+          location.hash.replace(/^#\/?/, "");
+        if (slug) document.documentElement.classList.add("direct-link");
+      })();
+    </script>
+    <style>
+      .direct-link #splash-screen { display: none; }
+    </style>
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/profile-favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/profile-favicon-16.png" />
     <link rel="apple-touch-icon" href="img/favicon/profile-apple-touch-icon.png" />
