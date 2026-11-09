@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Marta Pey — Portfolio</title>
+    <script>
+      // GitHub Pages no tiene /about, /cafler… como archivos: abre este 404.html.
+      // Se vuelve a la portada con la ruta en ?r= y el index.html abre ese proyecto.
+      var ruta = location.pathname.replace(/^\/+|\/+$/g, "");
+      location.replace("/" + (ruta ? "?r=" + encodeURIComponent(ruta) : "") + location.hash);
+    </script>
+  </head>
+  <body></body>
+</html>
